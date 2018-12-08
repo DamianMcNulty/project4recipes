@@ -11,5 +11,5 @@ def hello():
 
 if __name__ == '__main__':
     HOST = environ.get('IP')
-    PORT = int(environ.get('C9_PORT'))
+    PORT = int(environ.get('PORT'))
     app.run(HOST, PORT, debug=True)
