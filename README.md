@@ -70,7 +70,7 @@ Cloud9
 1. sudo pip3 install flask
 2. pip3 freeze --local > requirements.txt
 1. heroku login
-2. heroku create damianmcdev1-project4-recipes --region eu
+2. heroku create damianmcdev1-project4recipes --region eu
 3. pip3 freeze --local > requirements.txt
 4. echo web: python runserver.py > Procfile
 5. git push heroku master
