@@ -30,17 +30,17 @@
 
 ### User Stories
 
-A user can input an ingredient
-A user can input categories
-A user can select multiple ingredients
-A user can input a recipe
-An ingredient is stored in a database
-A recipe is stored in a database
-A category is stored in a database
-A user can filter a list of recipes based on various criteria, ordered by number of views or upvotes, pagination, showing some summary statistics, number of matching recipes, number of new recipes
-A user can view detailed info about each recipe
-A user can edit and delete recipes
-A user can log in with a username
+1. A user can input an ingredient
+2. A user can input categories
+3. A user can select multiple ingredients
+4. A user can input a recipe
+5. An ingredient is stored in a database
+6. A recipe is stored in a database
+7. A category is stored in a database
+8. A user can filter a list of recipes based on various criteria, ordered by number of views or upvotes, pagination, showing some summary statistics, number of matching recipes, number of new recipes
+9. A user can view detailed info about each recipe
+10. A user can edit and delete recipes
+11. A user can log in with a username
 
 ## Technologies Used
 [(Back to top)](#table-of-contents)
