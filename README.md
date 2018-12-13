@@ -42,13 +42,13 @@
 10. A user can edit and delete recipes
 11. A user can log in with a username
 
-### Wireframe prototype
+### ![Wireframe prototype](https://xd.adobe.com/view/8b0bf512-6a50-492f-46c1-07d633b33a10-fd3a/)
 
-<iframe width="360" height="640" src="https://xd.adobe.com/embed/8b0bf512-6a50-492f-46c1-07d633b33a10-fd3a/" frameborder="0" allowfullscreen></iframe>
+### ![Design Specs](https://xd.adobe.com/spec/3280e430-8e27-419d-6f08-fe04f9f7d897-44b1/)
 
-### Design Specs
+### Design Demonstration 
 
-[! Design Specs](https://xd.adobe.com/spec/3280e430-8e27-419d-6f08-fe04f9f7d897-44b1/)
+<img src="https://github.com/DamianMcNulty/project4recipes/blob/master/img/AdobeXDCC13_12_2018Project4Re.gif" width=30% height=350px alt="Demonstration">
 
 ## Technologies Used
 [(Back to top)](#table-of-contents)
