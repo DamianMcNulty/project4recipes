@@ -111,7 +111,7 @@
 ## Credits
 [(Back to top)](#table-of-contents)
 1. [Online Converter](https://www.onlineconverter.com/mp4-to-gif)
-2. [Easy Table Filter TavoQiqe] (https://bootsnipp.com/snippets/featured/easy-table-filter)
+2. [Easy Table Filter TavoQiqe](https://bootsnipp.com/snippets/featured/easy-table-filter)
 
 ## License:
 
