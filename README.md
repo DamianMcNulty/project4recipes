@@ -48,7 +48,7 @@
 
 ### Design Demonstration 
 
-<img src="https://github.com/DamianMcNulty/project4recipes/blob/master/img/AdobeXDCC13_12_2018Project4Re.gif" width=30% height=350px alt="Demonstration">
+<img src="https://github.com/DamianMcNulty/project4recipes/blob/master/static/img/AdobeXDCC13_12_2018Project4Re.gif" width=30% height=350px alt="Demonstration">
 
 ## Technologies Used
 [(Back to top)](#table-of-contents)
