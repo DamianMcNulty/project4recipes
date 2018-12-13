@@ -42,6 +42,14 @@
 10. A user can edit and delete recipes
 11. A user can log in with a username
 
+### Wireframe prototype
+
+<iframe width="360" height="640" src="https://xd.adobe.com/embed/8b0bf512-6a50-492f-46c1-07d633b33a10-fd3a/" frameborder="0" allowfullscreen></iframe>
+
+### Design Specs
+
+[! Design Specs](https://xd.adobe.com/spec/3280e430-8e27-419d-6f08-fe04f9f7d897-44b1/)
+
 ## Technologies Used
 [(Back to top)](#table-of-contents)
 1. [![HTML5](https://github.com/DamianMcNulty/my-first-website/blob/master/img/HTML5_logo_and_wordmark.svg)](https://en.wikipedia.org/wiki/HTML5) 
@@ -65,6 +73,12 @@ Cloud9
     python3 runserver.py
 ```
 
+.env
+```
+    echo "SECRET_KEY='...'" > .env
+    echo ".env" >> .gitignore
+```
+
 ## Deployment
 [(Back to top)]
 1. sudo pip3 install flask
@@ -76,6 +90,7 @@ Cloud9
 5. git push heroku master
 7. heroku config:set IP="0.0.0.0"
 8. heroku config:set PORT="8080"
+9. heroku config:set SECRET_KEY="..."
 
  
 ## Credits
