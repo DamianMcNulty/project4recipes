@@ -42,9 +42,9 @@
 10. A user can edit and delete recipes
 11. A user can log in with a username
 
-### ![Wireframe prototype](https://xd.adobe.com/view/8b0bf512-6a50-492f-46c1-07d633b33a10-fd3a/)
+### [Wireframe prototype](https://xd.adobe.com/view/8b0bf512-6a50-492f-46c1-07d633b33a10-fd3a/)
 
-### ![Design Specs](https://xd.adobe.com/spec/3280e430-8e27-419d-6f08-fe04f9f7d897-44b1/)
+### [Design Specs](https://xd.adobe.com/spec/3280e430-8e27-419d-6f08-fe04f9f7d897-44b1/)
 
 ### Design Demonstration 
 
@@ -95,6 +95,7 @@ Cloud9
  
 ## Credits
 [(Back to top)](#table-of-contents)
+1. [Online Converter](https://www.onlineconverter.com/mp4-to-gif)
 
 ## License:
 
