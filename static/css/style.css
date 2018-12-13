@@ -1,0 +1,35 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.List__link {
+    list-style: none;
+}
+
+.List__horizontal {
+    display: inline-block;
+    margin-top: 70px;
+    margin-left: 45px;
+}
+
+.Footer__center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grey {
+    background-color: grey;
+}
+
+.mt150 {
+    margin-top: 150px;
+}
+
+.mb150 {
+    margin-bottom: 150px;
+}

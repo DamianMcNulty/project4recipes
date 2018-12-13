@@ -14,7 +14,7 @@
     - CSS3
     - Python
     - Flask
-- [Local Testing](#local-testing)
+- [Development Environment](#development-environment)
 - [Deployment](#deployment)
 - [Credits](#credits)
     - [Content](#content)
@@ -58,7 +58,9 @@
 
 3. [![Git](https://github.com/DamianMcNulty/my-first-website/blob/master/img/Git-logo.svg)](https://en.wikipedia.org/wiki/Git)  
 
-## Local testing
+## Development Environment
+
+### windows
 ```pip install virtualenv
    python -m virtualenv env
    .\env\Scripts\activate
@@ -66,16 +68,27 @@
    python runserver.py
    .\env\Scripts\deactivate
 ```
-Cloud9
+### Cloud9
 ```
     sudo pip3 install -r requirements.txt
-    alias run="python3 ~/workspace/Project4Recipes/runserver.py"
-    python3 runserver.py
+    export DEVELOPMENT=True
+    export SECRET_KEY="..."
+    export MONGO_DBNAME="..."
+    export MONGO_URI='...'
+    sudo pip3 install pymongo
+    sudo pip3 install Flask-PyMongo
+    pip3 freeze --local > requirements.txt
+    echo 'alias run="python3 ~/workspace/project4recipes/runserver.py"' >> ~/.bash_aliases
+    source ~/.bash_aliases
+    run
 ```
 
 .env
 ```
     echo "SECRET_KEY='...'" > .env
+    echo "export DEVELOPMENT=True" >> .env
+    echo 'export MONGO_DBNAME="..."' >> .env
+    echo 'export MONGO_URI='...'' >> .env
     echo ".env" >> .gitignore
 ```
 
@@ -91,11 +104,14 @@ Cloud9
 7. heroku config:set IP="0.0.0.0"
 8. heroku config:set PORT="8080"
 9. heroku config:set SECRET_KEY="..."
+10. heroku config:set MONGO_DBNAME="..."
+10. heroku config:set MONGO_URI="..."
 
  
 ## Credits
 [(Back to top)](#table-of-contents)
 1. [Online Converter](https://www.onlineconverter.com/mp4-to-gif)
+2. [Easy Table Filter TavoQiqe] (https://bootsnipp.com/snippets/featured/easy-table-filter)
 
 ## License:
 
