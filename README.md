@@ -88,7 +88,7 @@
     echo "SECRET_KEY='...'" > .env
     echo "export DEVELOPMENT=True" >> .env
     echo 'export MONGO_DBNAME="..."' >> .env
-    echo 'export MONGO_URI='...'' >> .env
+    echo 'export MONGO_URI="..."' >> .env
     echo ".env" >> .gitignore
 ```
 
