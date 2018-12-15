@@ -52,6 +52,17 @@ def add_ingredient():
         message='Add an ingredient',
         ingredients=mongo.db.ingredients.find()
     )
+    
+@app.route('/add_allergen')
+def add_allergen():
+    """Renders the add allergen page."""
+    return render_template(
+        'add_allergen.html',
+        title='Add allergens',
+        year=datetime.now().year,
+        message='Add an allergen',
+        allergens=mongo.db.allergens.find()
+    )
 
 @app.route('/add_recipe')
 def add_recipe():
@@ -62,7 +73,8 @@ def add_recipe():
         year=datetime.now().year,
         message='Add a recipe here',
         categories=mongo.db.categories.find(),
-        ingredients=mongo.db.ingredients.find()
+        ingredients=mongo.db.ingredients.find(),
+        allergens=mongo.db.allergens.find()
     )
 
 @app.route('/insert_category', methods=['POST'])
@@ -78,6 +90,13 @@ def insert_ingredient():
     ingredient_doc = {'ingredient_name': request.form['ingredient_name']}
     ingredients.insert_one(ingredient_doc)
     return redirect(url_for('add_ingredient'))
+    
+@app.route('/insert_allergen', methods=['POST'])
+def insert_allergen():
+    allergens = mongo.db.allergens
+    allergen_doc = {'allergen_name': request.form['allergen_name']}
+    allergens.insert_one(allergen_doc)
+    return redirect(url_for('add_allergen'))
 
 @app.route('/insert_recipe', methods=['POST'])
 def insert_recipe():
@@ -94,6 +113,11 @@ def delete_recipe(recipe_id):
 def delete_ingredient(ingredient_id):
     mongo.db.ingredients.remove({'_id': ObjectId(ingredient_id)})
     return redirect(url_for('add_ingredient'))
+    
+@app.route('/delete_allergen/<allergen_id>')
+def delete_allergen(allergen_id):
+    mongo.db.allergens.remove({'_id': ObjectId(allergen_id)})
+    return redirect(url_for('add_allergen'))
 
 @app.route('/delete_category/<category_id>')
 def delete_category(category_id):

@@ -90,6 +90,7 @@
     echo 'export MONGO_DBNAME="..."' >> .env
     echo 'export MONGO_URI="..."' >> .env
     echo ".env" >> .gitignore
+    source .env
 ```
 
 ## Deployment
