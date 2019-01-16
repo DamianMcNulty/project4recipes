@@ -58,61 +58,63 @@
 
 ## Development Environment
 
+[(Back to top)](#table-of-contents)
+
 ### windows
 
-```
-   pip install virtualenv
-   python -m virtualenv env
-   .\env\Scripts\activate
-   pip install -r requirements.txt
-   python runserver.py
-   .\env\Scripts\deactivate
-```
+    pip install virtualenv
+    python -m virtualenv env
+    .\env\Scripts\activate
+    pip install -r requirements.txt
+    python runserver.py
+    .\env\Scripts\deactivate
 
 ### Cloud9
 
-        sudo pip3 install -r requirements.txt
-        export DEVELOPMENT=True
-        export SECRET_KEY="..."
-        export MONGO_DBNAME="..."
-        export MONGO_URI='...'
-        sudo pip3 install pymongo
-        sudo pip3 install Flask-PyMongo
-        pip3 freeze --local > requirements.txt
-        echo 'alias run="python3 ~/workspace/project4recipes/runserver.py"' >> ~/.bash_aliases
-        source ~/.bash_aliases
-        run
+    sudo pip3 install -r requirements.txt
+    export DEVELOPMENT=True
+    export SECRET_KEY="..."
+    export MONGO_DBNAME="..."
+    export MONGO_URI='...'
+    sudo pip3 install pymongo
+    sudo pip3 install Flask-PyMongo
+    pip3 freeze --local > requirements.txt
+    echo 'alias run="python3 ~/workspace/project4recipes/runserver.py"' >> ~/.bash_aliases
+    source ~/.bash_aliases
+    run
 
 .env
 
-        echo "SECRET_KEY='...'" > .env
-        echo "export DEVELOPMENT=True" >> .env
-        echo 'export MONGO_DBNAME="..."' >> .env
-        echo 'export MONGO_URI="..."' >> .env
-        echo ".env" >> .gitignore
-        source .env
+    echo "SECRET_KEY='...'" > .env
+    echo "export DEVELOPMENT=True" >> .env
+    echo 'export MONGO_DBNAME="..."' >> .env
+    echo 'export MONGO_URI="..."' >> .env
+    echo ".env" >> .gitignore
+    source .env
 
 ## Deployment
 
-[(Back to top)]
-1\. sudo pip3 install flask
-2\. pip3 freeze --local > requirements.txt
-1\. heroku login
-2\. heroku create damianmcdev1-project4recipes --region eu
-3\. pip3 freeze --local > requirements.txt
-4\. echo web: python runserver.py > Procfile
-5\. git push heroku master
-7\. heroku config:set IP="0.0.0.0"
-8\. heroku config:set PORT="8080"
-9\. heroku config:set SECRET_KEY="..."
-10\. heroku config:set MONGO_DBNAME="..."
-10\. heroku config:set MONGO_URI="..."
+[(Back to top)](#table-of-contents)
+
+1.  sudo pip3 install flask
+2.  pip3 freeze --local > requirements.txt
+3.  heroku login
+4.  heroku create damianmcdev1-project4recipes --region eu
+5.  pip3 freeze --local > requirements.txt
+6.  echo web: python runserver.py > Procfile
+7.  git push heroku master
+8.  heroku config:set IP="0.0.0.0"
+9.  heroku config:set PORT="8080"
+10. heroku config:set SECRET_KEY="..."
+11. heroku config:set MONGO_DBNAME="..."
+12. heroku config:set MONGO_URI="..."
 
 ## Credits
 
 [(Back to top)](#table-of-contents)
-1\. [Online Converter](https://www.onlineconverter.com/mp4-to-gif)
-2\. [Easy Table Filter TavoQiqe](https://bootsnipp.com/snippets/featured/easy-table-filter)
+
+1.  [Online Converter](https://www.onlineconverter.com/mp4-to-gif)
+2.  [Easy Table Filter TavoQiqe](https://bootsnipp.com/snippets/featured/easy-table-filter)
 
 ## License:
 
