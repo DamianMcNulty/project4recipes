@@ -54,7 +54,17 @@
 
 3.  [Git](https://git-scm.com/)  
 
-4.  [Github](https://github.com/) 
+4.  [Github](https://github.com/)
+
+5.  [Online Converter](https://www.onlineconverter.com/mp4-to-gif)
+
+6.  [Site24x7 Link Checker](https://www.site24x7.com/link-checker.html)
+
+7.  [HTML5 Validator](https://validator.w3.org/)
+
+8.  [CSS3 Validator](https://jigsaw.w3.org/css-validator/)
+
+9.  [Axe](https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd?hl=en)
 
 ## Development Environment
 
@@ -113,8 +123,7 @@
 
 [(Back to top)](#table-of-contents)
 
-1.  [Online Converter](https://www.onlineconverter.com/mp4-to-gif)
-2.  [Easy Table Filter TavoQiqe](https://bootsnipp.com/snippets/featured/easy-table-filter)
+-   [Easy Table Filter TavoQiqe](https://bootsnipp.com/snippets/featured/easy-table-filter)
 
 ## License:
 
