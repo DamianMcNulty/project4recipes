@@ -33,3 +33,7 @@ body {
 .mb150 {
     margin-bottom: 150px;
 }
+
+.btn-info {
+    color: #000;
+}
