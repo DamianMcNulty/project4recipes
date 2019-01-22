@@ -37,3 +37,7 @@ body {
 .btn-info, .btn-success {
     color: #000;
 }
+
+a {
+    color: #106bb9;
+}
