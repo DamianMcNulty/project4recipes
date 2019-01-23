@@ -101,7 +101,7 @@ def insert_allergen():
 @app.route('/insert_recipe', methods=['POST'])
 def insert_recipe():
     recipes =  mongo.db.recipes
-    recipes.insert_one(request.form.to_dict())
+    recipes.insert_one(request.form.to_dict(flat=False))
     return redirect(url_for('add_recipe'))
 
 @app.route('/delete_recipe/<recipe_id>')
