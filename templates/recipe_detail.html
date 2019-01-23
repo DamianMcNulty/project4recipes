@@ -3,15 +3,23 @@
 <br>
 <br>
 <br>
-Category name: {% for cat in recipe.category_name %}{{cat}}{% endfor %}
+<header>
+        <h1 class="text-center">
+            {% for name in recipe.recipe_name %}{{name}}{% endfor %}
+        </h1>
+</header>
 <br>
 <br>
-Ingredients: <ol>{% for ingredient in recipe.checkboxes %}<li>{{ingredient}}</li>{% endfor %}</ol>
+<h2>Ingredients:</h2>
+<ol>{% for ingredient in recipe.checkboxes %}
+        <li>{{ingredient}}</li>
+    {% endfor %}
+</ol>
 <br>
 <br>
-Recipe name: {% for name in recipe.recipe_name %}{{name}}{% endfor %}
 <br>
 <br>
+<h2>Instructions:</h2>
 <ol>
     <li>{% for step in recipe.recipe_ingredients1 %}{{step}}{% endfor %}</li>
     <li>{% for step in recipe.recipe_ingredients2 %}{{step}}{% endfor %}</li>
