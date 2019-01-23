@@ -5,10 +5,10 @@
         <h1 class="text-center">
             {% for name in recipe.recipe_name %}{{name}}{% endfor %}
         </h1>
-        <img class="ma0 jumbotron" src="/static/img/toa-heftiba-714913-unsplash.jpg" alt="pic" />
-</header>
-<main>
-    <div class="row">
+    </header>
+    <main>
+        <div class="row">
+        <img class="m0a col-sm-6 jumbotron" src="/static/img/toa-heftiba-714913-unsplash.jpg" alt="pic" />
         <section class="col-sm-6">
             <h2>Ingredients:</h2>
             <ol>{% for ingredient in recipe.checkboxes %}
