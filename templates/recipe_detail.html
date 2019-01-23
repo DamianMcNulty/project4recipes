@@ -6,7 +6,7 @@
 Category name: {% for cat in recipe.category_name %}{{cat}}{% endfor %}
 <br>
 <br>
-Ingredients: {% for ingredient in recipe.checkboxes %}{{ingredient}} {% endfor %}
+Ingredients: {% for ingredient in recipe.checkboxes %}<div>{{ingredient}}</div>{% endfor %}
 <br>
 <br>
 Recipe name: {% for name in recipe.recipe_name %}{{name}}{% endfor %}
