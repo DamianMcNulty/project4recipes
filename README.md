@@ -119,6 +119,13 @@
 11. heroku config:set MONGO_DBNAME="..."
 12. heroku config:set MONGO_URI="..."
 
+## Research
+
+[(Back to top)](#table-of-contents)
+
+-   [Add many ingredients](https://stackoverflow.com/questions/45590988/converting-flask-form-data-to-json-only-gets-first-value)
+
+
 ## Credits
 
 [(Back to top)](#table-of-contents)
