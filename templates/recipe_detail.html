@@ -4,22 +4,22 @@
 <br>
 <br>
 Category name: {% for cat in recipe.category_name %}
-{{cat.category_name}}
+{{cat}
 {% endfor %}
 <br>
 <br>
-Ingredients: {% for ingredient in recipe.checkboxes %}ingredient{% endfor %}
+Ingredients: {% for ingredient in recipe.checkboxes %}{{ingredient}}{% endfor %}
+<br>}}
+<br>
+Recipe name: {% for name in recipe.recipe_name %}{{name}}{% endfor %}
 <br>
 <br>
-Recipe name: {% for name in recipe.recipe_name %}name{% endfor %}
+Step1: {% for step in recipe.recipe_ingredients1 %}{{step}}{% endfor %}
 <br>
 <br>
-Step1: {% for step in recipe.recipe_ingredients1 %}step{% endfor %}
+Step2: {% for step in recipe.recipe_ingredients2 %}{{step}}{% endfor %}
 <br>
 <br>
-Step2: {% for step in recipe.recipe_ingredients2 %}step{% endfor %}
-<br>
-<br>
-Step3: {% for step in recipe.recipe_ingredients3 %}step{% endfor %}
+Step3: {% for step in recipe.recipe_ingredients3 %}{{step}}{% endfor %}
 
 {% endblock %}
