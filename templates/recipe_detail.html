@@ -3,9 +3,7 @@
 <br>
 <br>
 <br>
-Category name: {% for cat in recipe.category_name %}
-{{cat}
-{% endfor %}
+Category name: {% for cat in recipe.category_name %}{{cat}{% endfor %}
 <br>
 <br>
 Ingredients: {% for ingredient in recipe.checkboxes %}{{ingredient}}{% endfor %}
