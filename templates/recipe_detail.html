@@ -12,12 +12,10 @@ Ingredients: <ol>{% for ingredient in recipe.checkboxes %}<li>{{ingredient}}</li
 Recipe name: {% for name in recipe.recipe_name %}{{name}}{% endfor %}
 <br>
 <br>
-Step1: {% for step1 in recipe.recipe_ingredients1 %}{{step1}}{% endfor %}
-<br>
-<br>
-Step2: {% for step2 in recipe.recipe_ingredients2 %}{{step2}}{% endfor %}
-<br>
-<br>
-Step3: {% for step3 in recipe.recipe_ingredients3 %}{{step3}}{% endfor %}
+<ol>
+    <li>{% for step in recipe.recipe_ingredients1 %}{{step}}{% endfor %}</li>
+    <li>{% for step in recipe.recipe_ingredients2 %}{{step}}{% endfor %}</li>
+    <li>{% for step in recipe.recipe_ingredients3 %}{{step}}{% endfor %}</li>
+</ol>
 
 {% endblock %}
