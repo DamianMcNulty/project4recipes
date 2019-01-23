@@ -25,8 +25,8 @@
                                     <div class="media">
                                         <div class="media-body">
                                             <h2 class="title">
-                                                <a href="{{url_for('recipe_detail', recipe_id =recipe._id)}}">{{recipe.recipe_name}}</a>
-                                                <span class="{{recipe.category_name}}">({{recipe.category_name}})</span>
+                                                <a href="{{url_for('recipe_detail', recipe_id =recipe._id)}}">{% for name in recipe.recipe_name %}{{name}}{% endfor %}</a>
+                                                <span class="{{recipe.category_name}}">({% for cat in recipe.category_name %}{{cat}}{% endfor %})</span>
                                             </h2>
                                             <a href="{{url_for('delete_recipe', recipe_id =recipe._id)}}" class="pull-right btn btn-info">Remove</a>
                                             <!-- <p class="summary">{{recipe.checkboxes}}</p> -->
