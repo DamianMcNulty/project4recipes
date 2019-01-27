@@ -13,6 +13,7 @@
 -   [UX](#ux)
 -   [Technologies Used](#technologies-used)
 -   [Development Environment](#development-environment)
+-   [Local Testing](#local-testing)
 -   [Deployment](#deployment)
 -   [Credits](#credits)
     -   [Content](#content)
@@ -101,6 +102,13 @@
     echo 'export MONGO_URI="..."' >> .env
     echo ".env" >> .gitignore
     source .env
+
+## Local Testing
+
+[(Back to top)](#table-of-contents)
+
+    npm i
+    npm run cy:open
 
 ## Deployment
 
