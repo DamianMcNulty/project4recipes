@@ -67,6 +67,8 @@
 
 9.  [Axe](https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd?hl=en)
 
+10. [Python 3.7.2](https://www.python.org/)
+
 ## Development Environment
 
 [(Back to top)](#table-of-contents)
@@ -114,25 +116,24 @@
 
 [(Back to top)](#table-of-contents)
 
-1.  sudo pip3 install flask
-2.  pip3 freeze --local > requirements.txt
-3.  heroku login
-4.  heroku create damianmcdev1-project4recipes --region eu
-5.  pip3 freeze --local > requirements.txt
-6.  echo web: python runserver.py > Procfile
-7.  git push heroku master
-8.  heroku config:set IP="0.0.0.0"
-9.  heroku config:set PORT="8080"
-10. heroku config:set SECRET_KEY="..."
-11. heroku config:set MONGO_DBNAME="..."
-12. heroku config:set MONGO_URI="..."
+    sudo pip3 install flask
+    pip3 freeze --local > requirements.txt
+    heroku login
+    heroku create damianmcdev1-project4recipes --region eu
+    pip3 freeze --local > requirements.txt
+    echo web: python runserver.py > Procfile
+    git push heroku master
+    heroku config:set IP="0.0.0.0"
+    heroku config:set PORT="8080"
+    heroku config:set SECRET_KEY="..."
+    heroku config:set MONGO_DBNAME="..."
+    heroku config:set MONGO_URI="..."
 
 ## Research
 
 [(Back to top)](#table-of-contents)
 
 -   [Add many ingredients](https://stackoverflow.com/questions/45590988/converting-flask-form-data-to-json-only-gets-first-value)
-
 
 ## Credits
 
