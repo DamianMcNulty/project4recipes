@@ -12,19 +12,19 @@ describe('homepage', function() {
   //     .check({ force: true }).should('be.checked')
   // });
 
-  it('click on add recipe', () => {
+  it('click on Recipes', () => {
     cy.get('#add_recipe').click();
   });
 
-  it('click on add category', () => {
+  it('click on Categories', () => {
     cy.get('#add_category').click();
   });
 
-  it('click on add ingredient', () => {
+  it('click on Ingredients', () => {
     cy.get('#add_ingredient').click();
   });
 
-  it('click on add allergen', () => {
+  it('click on Allergens', () => {
     cy.get('#add_allergen').click();
   });
 
