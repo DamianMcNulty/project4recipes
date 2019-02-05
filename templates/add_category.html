@@ -1,38 +1,23 @@
 {% extends "layout.html" %} {% block content %}
-<br>
-<br>
-<br>
-<br>
 <form action="{{ url_for('insert_category') }}"  method="POST" class="form-horizontal">
     <fieldset>
-        <!-- Form Name -->
-        <legend>{{ message }}</legend>
-
         <!-- Text input-->
         <div class="form-group">
             <label class="col-md-4 control-label" for="category_name">Category</label>
             <div class="col-md-5">
                 <input id="category_name" name="category_name" type="text" placeholder="Add a category" class="form-control input-md">
-                <button name="action" class="btn btn-success">Add</button>
-            </div>
-        </div>
-
-        <!-- Button -->
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="action">Add category</label>
-            <div class="col-md-4">
-                <button name="action" class="btn btn-success">Add</button>
+                <button name="action" class="fas fa-plus"> Add</button>
             </div>
         </div>
 
          <!-- Categories -->
         <div class="form-group">
-            <div class="col-md-4 ">
+            <div class="col-md-offset-4 col-md-5">
                 <ul class="List__link">
                     {% for category in categories %}
                     <li>
                         {{category.category_name}}
-                        <a href="{{url_for('delete_category', category_id =category._id)}}" class="fas fa-trash"> Remove</a>
+                        <a href="{{url_for('delete_category', category_id =category._id)}}" class="pull-right fas fa-trash"> Remove</a>
                     </li>
                     <br>
                     {% endfor %}

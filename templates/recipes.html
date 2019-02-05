@@ -13,7 +13,7 @@
     <div class="col-md-8 col-md-offset-2 pr">
         {% for recipe in recipes %}
         <div class="panel panel-default">
-            <div class="panel-body" data-status="{{recipe.category_name}}">                 
+            <div class="panel-body" data-status="{% for cat in recipe.category_name %}{{cat}}{% endfor %}">                 
                 <a class="center" href="{{url_for('recipe_detail', recipe_id =recipe._id)}}">{% for name in recipe.recipe_name %}{{name}}{% endfor %}</a>
                 <a href="{{url_for('delete_recipe', recipe_id =recipe._id)}}" class="pull-right fas fa-trash"> Remove</a>
             </div>
