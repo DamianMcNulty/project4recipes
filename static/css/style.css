@@ -66,5 +66,17 @@ h2 {
 }
 
 .pr {
-    postion: relative;
+    position: relative;
+}
+
+.w2 {
+    width: 2rem;
+}
+
+.ml2 {
+    margin-left: 2rem;
+}
+
+.fs2 {
+    font-size: 2rem;
 }

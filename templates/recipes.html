@@ -1,3 +1,4 @@
+
 {% extends 'layout.html'%} 
 {% block content %}
 <div class="row">
@@ -13,11 +14,7 @@
         {% for recipe in recipes %}
         <div class="panel panel-default">
             <div class="panel-body" data-status="{{recipe.category_name}}">                 
-                <a href="javascript:;" class="star">
-                    <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-                </a>
                 <a class="center" href="{{url_for('recipe_detail', recipe_id =recipe._id)}}">{% for name in recipe.recipe_name %}{{name}}{% endfor %}</a>
-                <span class="{{recipe.category_name}}">({% for cat in recipe.category_name %}{{cat}}{% endfor %})</span>
                 <a href="{{url_for('delete_recipe', recipe_id =recipe._id)}}" class="pull-right fas fa-trash"> Remove</a>
             </div>
         </div>
