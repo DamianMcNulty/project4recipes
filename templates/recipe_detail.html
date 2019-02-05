@@ -2,8 +2,9 @@
 
 {% block content %}
 <header>
-        <h1 class="text-center">
+        <h1 class="fs2 mb2 text-center">
             {% for name in recipe.recipe_name %}{{name}}{% endfor %}
+            <a class="fas fa-star" aria-hidden="true"> Upvote</a>
         </h1>
     </header>
     <main>

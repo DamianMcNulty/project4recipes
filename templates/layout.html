@@ -5,29 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }} - Project4 Recipes</title>
     <link rel="shortcut icon" href="{{url_for('static', filename='favicon.ico')}}" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+
 </head>
 
 <body class="mt150">
     <header class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
+                <h1>
+                    <a href="/" class="navbar-brand pull-left">Recipe Manager</a>
+                </h1>
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <h1>
-                    <a href="/" class="navbar-brand">Recipe Manager</a>
-                </h1>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
-                    <li><a href="{{ url_for('add_category') }}">Add Category</a></li>
-                    <li><a href="{{ url_for('add_ingredient') }}">Add Ingredient</a></li>
-                    <li><a href="{{ url_for('add_allergen') }}">Add Allergen</a></li>
+                    <li><a id="add_recipe" href="{{ url_for('add_recipe') }}">Recipes</a></li>
+                    <li><a id="add_category" href="{{ url_for('add_category') }}">Categories</a></li>
+                    <li><a id="add_ingredient" href="{{ url_for('add_ingredient') }}">Ingredients</a></li>
+                    <li><a id="add_allergen" href="{{ url_for('add_allergen') }}">Allergens</a></li>
                 </ul>
             </div>
         </div>
@@ -36,11 +38,6 @@
     <main class="container">
         {% block content %}{% endblock %}      
     </main>
-
-    <hr />
-    <footer class="Footer__center">
-        <p>&copy; {{ year }} Recipe Manager</p>
-    </footer>
 
     <script src="/static/js/jquery-1.10.2.min.js"></script>
     <script src="/static/js/bootstrap.min.js"></script>
