@@ -2,7 +2,14 @@
 {% extends 'layout.html'%} 
 {% block content %}
 <div class="row">
-    <div class="text-center mb2">
+    <div class="col-md-4 mb2 overflowxs overflowyh">
+        <ul class="lsn nowrap">
+            {% for ingredient in ingredients %}
+            <button type="button" class="btn btn-success btn-filter" data-target="{{ingredient.ingredient_name}}">{{ingredient.ingredient_name}}</button>
+            {% endfor %}
+        </ul>
+    </div>     
+    <div class="col-md-4 mb2">
         <div class="btn-group">
             {% for cat in categories %}
                 <button type="button" class="btn btn-success btn-filter" data-target="{{cat.category_name}}">{{cat.category_name}}</button>
@@ -10,52 +17,25 @@
             <button type="button" class="btn btn-default btn-filter" data-target="all">All</button>
         </div>
     </div>
-    <form class="col-md-4" action="{{ url_for('insert_ingredient') }}" method="POST" class="form-horizontal">
-        <fieldset>
-            <!-- Ingredients -->
-            <div class="form-group">
-                <div class="">
-                    <ul class="List__link">
-                        {% for ingredient in ingredients %}
-                        <li>
-                            {{ingredient.ingredient_name}}
-                            <a href="{{url_for('delete_ingredient', ingredient_id =ingredient._id)}}" class="pull-right fas fa-trash"> Remove</a>
-                        </li>
-                        <br>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </div>
-        </fieldset>
-        </form>
-    </form>
-    <div class="col-md-4 pr">
-        {% for recipe in recipes %}
-        <div class="panel panel-default">
-            <div class="panel-body" data-status="{% for cat in recipe.category_name %}{{cat}}{% endfor %}">                 
-                <a class="center" href="{{url_for('recipe_detail', recipe_id =recipe._id)}}">{% for name in recipe.recipe_name %}{{name}}{% endfor %}</a>
-                <a href="{{url_for('delete_recipe', recipe_id =recipe._id)}}" class="pull-right fas fa-trash"> Remove</a>
-            </div>
+    
+    <div class="col-md-4 mb2">
+        <div class="btn-group">
+            {% for allergen in allergens %}
+            <button type="button" class="btn btn-success btn-filter" data-target="{{allergen.allergen_name}}">{{allergen.allergen_name}}</button>
+            {% endfor %}
         </div>
-        {% endfor %}             
     </div>
-    <form class="col-md-4" action="{{ url_for('insert_allergen') }}" method="POST" class="form-horizontal">
-        <fieldset>
-            <div class="form-group">
-                <div class="">
-                    <ul class="List__link">
-                        {% for allergen in allergens %}
-                        <li>
-                            {{allergen.allergen_name}}
-                            <a href="{{url_for('delete_allergen', allergen_id =allergen._id)}}" class="pull-right fas fa-trash"> Remove</a>
-                        </li>
-                        <br>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </div>
-        </fieldset>
-        </form>
-    </form>
+   
+    
+</div>
+<div class="col-md-6 col-md-offset-3 pr">
+    {% for recipe in recipes %}
+    <div class="panel panel-default">
+        <div class="panel-body" data-status="{% for cat in recipe.category_name %}{{cat}}{% endfor %}">                 
+            <a class="center mb2" href="{{url_for('recipe_detail', recipe_id =recipe._id)}}">{% for name in recipe.recipe_name %}{{name}}{% endfor %}</a>
+            <!-- <a href="{{url_for('delete_recipe', recipe_id =recipe._id)}}" class="pull-right fas fa-trash"> Remove</a> -->
+        </div>
+    </div>
+    {% endfor %}             
 </div>
 {% endblock %}

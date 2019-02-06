@@ -80,3 +80,23 @@ h2 {
 .fs2 {
     font-size: 2rem;
 }
+
+.lsn {
+    list-style: none;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.overflowxs {
+    overflow-x: scroll;
+}
+  
+.overflowyh {
+    overflow-y: hidden;
+}
+
+.dib {
+    display: inline-block;
+}

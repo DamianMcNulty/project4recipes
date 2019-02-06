@@ -1,42 +1,79 @@
 {% extends "layout.html" %} {% block content %}
-<form action="{{ url_for('insert_ingredient') }}" method="POST" class="form-horizontal">
-    <fieldset>
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="ingredient_name">Ingredient</label>
-            <div class="col-md-5">
-                <input id="ingredient_name" name="ingredient_name" type="text" placeholder="Add an ingredient" class="form-control input-md">
-                <button name="action" class="fas fa-plus"> Add</button>
-            </div>
+<div class="row">
+    <div class="col-md-4">
+            <ul class="lsn">
+                {% for ingredient in ingredients %}
+                <li>
+                    {{ingredient.ingredient_name}}
+                    <a href="{{url_for('delete_ingredient', ingredient_id =ingredient._id)}}" class="fas fa-trash"> Remove</a>
+                </li>
+                <br>
+                {% endfor %}
+            </ul>
         </div>
-    </fieldset>
-    </form>
-</form>
+    <div class="col-md-4">
+        <form action="{{ url_for('insert_ingredient') }}" method="POST" class="form-horizontal">
+            <fieldset>
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="ingredient_name">Ingredient</label>
+                    <div class="col-md-5">
+                        <input id="ingredient_name" name="ingredient_name" type="text" placeholder="Add an ingredient" class="form-control input-md">
+                        <button name="action" class="fas fa-plus"> Add</button>
+                    </div>
+                </div>
+            </fieldset>
+            </form>
+        </form>
+        
+        <form action="{{ url_for('insert_category') }}"  method="POST" class="form-horizontal">
+            <fieldset>
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="category_name">Category</label>
+                    <div class="col-md-5">
+                        <input id="category_name" name="category_name" type="text" placeholder="Add a category" class="form-control input-md">
+                        <button name="action" class="fas fa-plus"> Add</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        
+        <form action="{{ url_for('insert_allergen') }}" method="POST" class="form-horizontal">
+            <fieldset>
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="ingredient_name">Allergen</label>
+                    <div class="col-md-5">
+                        <input id="allergen_name" name="allergen_name" type="text" placeholder="Add an allergen" class="form-control input-md">
+                        <button name="action" class="fas fa-pluse"> Add</button>
+                    </div>
+                </div>
+            </fieldset>
+            </form>
+        </form>
+    </div>
+    <div class="col-md-4">
+        <ul class="List__link">
+            {% for allergen in allergens %}
+            <li>
+                {{allergen.allergen_name}}
+                <a href="{{url_for('delete_allergen', allergen_id =allergen._id)}}" class="pull-right fas fa-trash"> Remove</a>
+            </li>
+            <br>
+            {% endfor %}
+        </ul>
+    </div>
 
-<form action="{{ url_for('insert_category') }}"  method="POST" class="form-horizontal">
-    <fieldset>
-        <!-- Text input-->
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="category_name">Category</label>
-            <div class="col-md-5">
-                <input id="category_name" name="category_name" type="text" placeholder="Add a category" class="form-control input-md">
-                <button name="action" class="fas fa-plus"> Add</button>
+</div>
+<div class="col-md-6 col-md-offset-3 pr">
+        {% for recipe in recipes %}
+        <div class="panel panel-default">
+            <div class="panel-body" data-status="{% for cat in recipe.category_name %}{{cat}}{% endfor %}">                 
+                <a class="center mb2" href="{{url_for('recipe_detail', recipe_id =recipe._id)}}">{% for name in recipe.recipe_name %}{{name}}{% endfor %}</a>
+                <a href="{{url_for('delete_recipe', recipe_id =recipe._id)}}" class="pull-right fas fa-trash"> Remove</a>
             </div>
         </div>
-    </fieldset>
-</form>
-
-<form action="{{ url_for('insert_allergen') }}" method="POST" class="form-horizontal">
-    <fieldset>
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="ingredient_name">Allergen</label>
-            <div class="col-md-5">
-                <input id="allergen_name" name="allergen_name" type="text" placeholder="Add an allergen" class="form-control input-md">
-                <button name="action" class="fas fa-pluse"> Add</button>
-            </div>
-        </div>
-    </fieldset>
-    </form>
-</form>
+        {% endfor %}             
+    </div>
 
 
 {% endblock %}

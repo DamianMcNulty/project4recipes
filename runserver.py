@@ -63,7 +63,10 @@ def settings():
         title='Settings',
         year=datetime.now().year,
         message='Settings',
-        ingredients=mongo.db.ingredients.find()
+        recipes=mongo.db.recipes.find(),
+        categories=mongo.db.categories.find(),
+        ingredients=mongo.db.ingredients.find(),
+        allergens=mongo.db.allergens.find()
     )
     
 @app.route('/add_allergen')
