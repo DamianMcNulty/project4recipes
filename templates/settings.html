@@ -1,0 +1,42 @@
+{% extends "layout.html" %} {% block content %}
+<form action="{{ url_for('insert_ingredient') }}" method="POST" class="form-horizontal">
+    <fieldset>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="ingredient_name">Ingredient</label>
+            <div class="col-md-5">
+                <input id="ingredient_name" name="ingredient_name" type="text" placeholder="Add an ingredient" class="form-control input-md">
+                <button name="action" class="fas fa-plus"> Add</button>
+            </div>
+        </div>
+    </fieldset>
+    </form>
+</form>
+
+<form action="{{ url_for('insert_category') }}"  method="POST" class="form-horizontal">
+    <fieldset>
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="category_name">Category</label>
+            <div class="col-md-5">
+                <input id="category_name" name="category_name" type="text" placeholder="Add a category" class="form-control input-md">
+                <button name="action" class="fas fa-plus"> Add</button>
+            </div>
+        </div>
+    </fieldset>
+</form>
+
+<form action="{{ url_for('insert_allergen') }}" method="POST" class="form-horizontal">
+    <fieldset>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="ingredient_name">Allergen</label>
+            <div class="col-md-5">
+                <input id="allergen_name" name="allergen_name" type="text" placeholder="Add an allergen" class="form-control input-md">
+                <button name="action" class="fas fa-pluse"> Add</button>
+            </div>
+        </div>
+    </fieldset>
+    </form>
+</form>
+
+
+{% endblock %}

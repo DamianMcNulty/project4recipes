@@ -28,7 +28,9 @@ def get_recipes():
         title='Home Page',
         year=datetime.now().year,
         recipes=mongo.db.recipes.find(),
-        categories=mongo.db.categories.find()
+        categories=mongo.db.categories.find(),
+        ingredients=mongo.db.ingredients.find(),
+        allergens=mongo.db.allergens.find()
     )
 
 @app.route('/add_category')
@@ -50,6 +52,17 @@ def add_ingredient():
         title='Add ingredient',
         year=datetime.now().year,
         message='Add an ingredient',
+        ingredients=mongo.db.ingredients.find()
+    )
+
+@app.route('/settings')
+def settings():
+    """Renders the settings page."""
+    return render_template(
+        'settings.html',
+        title='Settings',
+        year=datetime.now().year,
+        message='Settings',
         ingredients=mongo.db.ingredients.find()
     )
     

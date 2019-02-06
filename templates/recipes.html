@@ -10,7 +10,26 @@
             <button type="button" class="btn btn-default btn-filter" data-target="all">All</button>
         </div>
     </div>
-    <div class="col-md-8 col-md-offset-2 pr">
+    <form class="col-md-4" action="{{ url_for('insert_ingredient') }}" method="POST" class="form-horizontal">
+        <fieldset>
+            <!-- Ingredients -->
+            <div class="form-group">
+                <div class="">
+                    <ul class="List__link">
+                        {% for ingredient in ingredients %}
+                        <li>
+                            {{ingredient.ingredient_name}}
+                            <a href="{{url_for('delete_ingredient', ingredient_id =ingredient._id)}}" class="pull-right fas fa-trash"> Remove</a>
+                        </li>
+                        <br>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </fieldset>
+        </form>
+    </form>
+    <div class="col-md-4 pr">
         {% for recipe in recipes %}
         <div class="panel panel-default">
             <div class="panel-body" data-status="{% for cat in recipe.category_name %}{{cat}}{% endfor %}">                 
@@ -20,5 +39,23 @@
         </div>
         {% endfor %}             
     </div>
+    <form class="col-md-4" action="{{ url_for('insert_allergen') }}" method="POST" class="form-horizontal">
+        <fieldset>
+            <div class="form-group">
+                <div class="">
+                    <ul class="List__link">
+                        {% for allergen in allergens %}
+                        <li>
+                            {{allergen.allergen_name}}
+                            <a href="{{url_for('delete_allergen', allergen_id =allergen._id)}}" class="pull-right fas fa-trash"> Remove</a>
+                        </li>
+                        <br>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </fieldset>
+        </form>
+    </form>
 </div>
 {% endblock %}
