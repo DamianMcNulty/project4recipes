@@ -5,7 +5,9 @@
     <div class="col-md-4 mb2 overflowxs overflowyh">
         <ul class="lsn nowrap">
             {% for ingredient in ingredients %}
-            <button type="button" class="btn btn-success btn-filter" data-target="{{ingredient.ingredient_name}}">{{ingredient.ingredient_name}}</button>
+            <li class="dib">
+                <button type="button" class="btn btn-success btn-filter" data-target="{{ingredient.ingredient_name}}">{{ingredient.ingredient_name}}</button>
+            </li>
             {% endfor %}
         </ul>
     </div>     
