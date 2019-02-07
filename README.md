@@ -31,14 +31,14 @@
 
 ### User Stories
 
-1.  As a user, I can input an ingredient
-2.  As a user, I can input categories
-3.  As a user, I can select multiple ingredients
-4.  As a user, I can input a recipe
-5.  An ingredient is stored in a database
-6.  A recipe is stored in a database
-7.  A category is stored in a database
-8.  A user can filter a list of recipes based on various criteria, ordered by number of views or upvotes, pagination, showing some summary statistics, number of matching recipes, number of new recipes
+1.  As a user, I can input a new ingredient and add it to the database.
+2.  As a user, I can input a new category and add it to the database.
+3.  As a user, I can imput a new allergen and add it to the database.
+4.  As a user, I can input a new recipe and add it to the database.
+5.  As a user, I can filter a list of recipes by meal.
+6.  As a user, I can filter a list of recipes by selecting one or more ingredients.
+7.  As a user, I can filter a list of recipes not containing one or more allergens.
+8.  As a user, I can sort a list of recipes by number of upvotes.
 9.  As a user, I can view detailed info about each recipe
 10. As a user, I can edit and delete recipes
 11. As a user, I can log in with a username
@@ -84,7 +84,7 @@
 
 ### Cloud9
 
-    sudo pip3 install -r requirements.txt
+    sudo pip3 install flask
     export DEVELOPMENT=True
     export SECRET_KEY="..."
     export MONGO_DBNAME="..."
@@ -116,18 +116,17 @@
 
 [(Back to top)](#table-of-contents)
 
-    sudo pip3 install flask
-    pip3 freeze --local > requirements.txt
+    git clone https://github.com/DamianMcNulty/project4recipes.git
+    pip3 install -r requirements.txt
     heroku login
     heroku create damianmcdev1-project4recipes --region eu
-    pip3 freeze --local > requirements.txt
     echo web: python runserver.py > Procfile
-    git push heroku master
     heroku config:set IP="0.0.0.0"
     heroku config:set PORT="8080"
     heroku config:set SECRET_KEY="..."
     heroku config:set MONGO_DBNAME="..."
     heroku config:set MONGO_URI="..."
+    git push heroku master
 
 ## Research
 
