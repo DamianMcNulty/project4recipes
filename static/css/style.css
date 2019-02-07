@@ -30,6 +30,10 @@ body {
     margin-top: 150px;
 }
 
+.mt40 {
+    margin-top: 40px;
+}
+
 .mb150 {
     margin-bottom: 150px;
 }
@@ -99,4 +103,12 @@ h2 {
 
 .dib {
     display: inline-block;
+}
+
+.p0 {
+    padding: 0;
+}
+
+.p1 {
+    padding: 1rem;
 }

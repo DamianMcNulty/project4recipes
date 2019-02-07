@@ -1,43 +1,15 @@
 
 {% extends 'layout.html'%} 
 {% block content %}
-<div class="row">
-    <div class="col-md-4 mb2 overflowxs overflowyh">
-        <ul class="lsn nowrap">
-            {% for ingredient in ingredients %}
-            <li class="dib">
-                <button type="button" class="btn btn-success btn-filter" data-target="{{ingredient.ingredient_name}}">{{ingredient.ingredient_name}}</button>
-            </li>
-            {% endfor %}
-        </ul>
-    </div>     
-    <div class="col-md-4 mb2">
-        <div class="btn-group">
-            {% for cat in categories %}
-                <button type="button" class="btn btn-success btn-filter" data-target="{{cat.category_name}}">{{cat.category_name}}</button>
-            {% endfor %}
-            <button type="button" class="btn btn-default btn-filter" data-target="all">All</button>
-        </div>
+<div class="row">    
+    <div class="col-md-6 col-md-offset-3">
+        {% for recipe in recipes %}
+            <div class="panel panel-default p1">
+                <div class="panel-body" data-status="{% for cat in recipe.category_name %}{{cat}}{% endfor %}">                 
+                    <a class="center" href="{{url_for('recipe_detail', recipe_id =recipe._id)}}">{% for name in recipe.recipe_name %}{{name}}{% endfor %}</a>
+                </div>
+            </div>
+        {% endfor %}             
     </div>
-    
-    <div class="col-md-4 mb2">
-        <div class="btn-group">
-            {% for allergen in allergens %}
-            <button type="button" class="btn btn-success btn-filter" data-target="{{allergen.allergen_name}}">{{allergen.allergen_name}}</button>
-            {% endfor %}
-        </div>
-    </div>
-   
-    
-</div>
-<div class="col-md-6 col-md-offset-3 pr">
-    {% for recipe in recipes %}
-    <div class="panel panel-default">
-        <div class="panel-body" data-status="{% for cat in recipe.category_name %}{{cat}}{% endfor %}">                 
-            <a class="center mb2" href="{{url_for('recipe_detail', recipe_id =recipe._id)}}">{% for name in recipe.recipe_name %}{{name}}{% endfor %}</a>
-            <!-- <a href="{{url_for('delete_recipe', recipe_id =recipe._id)}}" class="pull-right fas fa-trash"> Remove</a> -->
-        </div>
-    </div>
-    {% endfor %}             
 </div>
 {% endblock %}

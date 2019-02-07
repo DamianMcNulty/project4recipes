@@ -11,7 +11,7 @@
 
 </head>
 
-<body class="mt150">
+<body class="mt40">
     <header class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -26,6 +26,45 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" type="button" data-toggle="dropdown">Ingredients
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            {% for ingredient in ingredients %}
+                            <li>
+                                <a class="btn-filter" data-target="{{ingredient.ingredient_name}}">{{ingredient.ingredient_name}}</a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" type="button" data-toggle="dropdown">Allergens
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            {% for allergen in allergens %}
+                            <li class="">
+                                <a class="btn-filter" data-target="{{allergen.allergen_name}}">{{allergen.allergen_name}}</a>
+                            </li>
+                            {% endfor %}
+                        </ul>      
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" type="button" data-toggle="dropdown">Meal
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            {% for cat in categories %}
+                                <li>
+                                    <a class="btn-filter" data-target="{{cat.category_name}}">{{cat.category_name}}</a>
+                                </li>
+                            {% endfor %}
+                            <li>
+                                <a class="btn-filter" data-target="all">All</a>
+                            </li>
+                        </ul> 
+                    </li>
                     <li><a id="add_recipe" href="{{ url_for('add_recipe') }}">Recipes</a></li>
                     <li><a id="settings" href="{{ url_for('settings') }}">Settings</a></li>
                 </ul>
