@@ -15,7 +15,7 @@
             <div class="col-md-5">
                 <select id="category_name" name="category_name" class="form-control">
                     <option value="" disabled selected>Choose Category</option>
-                    {% for cat in categories %}
+                    {% for cat in categories2 %}
                     <option value="{{cat.category_name}}">{{cat.category_name}}</option>
                     {% endfor %}
                 </select>
@@ -28,7 +28,7 @@
             <div class="col-md-5">
                 <select id="allergen_name" name="allergen_name" class="form-control">
                     <option value="" disabled selected>Choose Allergen</option>
-                    {% for al in allergens %}
+                    {% for al in allergens2 %}
                     <option value="{{al.allergen_name}}">{{al.allergen_name}}</option>
                     {% endfor %}
                 </select>
@@ -40,7 +40,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="checkboxes">Ingredients</label>
             <div class="col-md-4">
-                {% for ingredient in ingredients %}
+                {% for ingredient in ingredients2 %}
                 <div class="checkbox">
                     <label for="{{ingredient.ingredient_name}}">
                         <input type="checkbox" name="checkboxes" id="{{ingredient.ingredient_name}}" value="{{ingredient.ingredient_name}}"> {{ingredient.ingredient_name}}

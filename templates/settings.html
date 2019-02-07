@@ -3,8 +3,8 @@
 {% block content %}
 <div class="row">
     <div class="col-md-4">
-        <ul>
-            {% for ingredient in ingredients %}
+        <ul class="lsn">
+            {% for ingredient in ingredients1 %}
             <li>
                 {{ingredient.ingredient_name}}
                 <a href="{{url_for('delete_ingredient', ingredient_id =ingredient._id)}}" class="fas fa-trash"> Remove</a>
@@ -52,8 +52,8 @@
         </form>
     </div>
     <div class="col-md-4">
-        <ul>
-            {% for allergen in allergens %}
+        <ul class="lsn">
+            {% for allergen in allergens1 %}
             <li>
                 {{allergen.allergen_name}}
                 <a href="{{url_for('delete_allergen', allergen_id =allergen._id)}}" class="fas fa-trash"> Remove</a>
@@ -65,7 +65,7 @@
 </div>
 <div class="col-md-12">
     <ul class="List__link">
-        {% for category in categories %}
+        {% for category in categories1 %}
         <li>
             {{category.category_name}}
             <a href="{{url_for('delete_category', category_id =category._id)}}" class="fas fa-trash"> Remove</a>

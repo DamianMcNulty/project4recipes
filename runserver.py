@@ -64,9 +64,9 @@ def settings():
         year=datetime.now().year,
         message='Settings',
         recipes=mongo.db.recipes.find(),
-        categories=mongo.db.categories.find(),
-        ingredients=mongo.db.ingredients.find(),
-        allergens=mongo.db.allergens.find()
+        categories1=mongo.db.categories.find(),
+        ingredients1=mongo.db.ingredients.find(),
+        allergens1=mongo.db.allergens.find()
     )
     
 @app.route('/add_allergen')
@@ -88,9 +88,9 @@ def add_recipe():
         title='Add Recipe',
         year=datetime.now().year,
         message='Add a recipe here',
-        categories=mongo.db.categories.find(),
-        ingredients=mongo.db.ingredients.find(),
-        allergens=mongo.db.allergens.find()
+        categories2=mongo.db.categories.find(),
+        ingredients2=mongo.db.ingredients.find(),
+        allergens2=mongo.db.allergens.find()
     )
 
 @app.route('/insert_category', methods=['POST'])
