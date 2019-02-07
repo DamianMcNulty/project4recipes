@@ -9,7 +9,31 @@
     </header>
     <main>
         <div class="row">
-        <img class="m0a col-sm-6" src="/static/img/toa-heftiba-714913-unsplash.jpg" alt="pic" />
+        <!-- <img class="m0a col-sm-6" src="/static/img/toa-heftiba-714913-unsplash.jpg" alt="pic" /> -->
+        <img class="m0a col-sm-6" sizes="(max-width: 1400px) 100vw, 1400px"
+            srcset="
+            /static/img/chicken_curry/chicken_curry_h1d0ju_c_scale,w_200.jpg 200w,
+            /static/img/chicken_curry/chicken_curry_h1d0ju_c_scale,w_418.jpg 418w,
+            /static/img/chicken_curry/chicken_curry_h1d0ju_c_scale,w_319.jpg 319w,
+            /static/img/chicken_curry/chicken_curry_h1d0ju_c_scale,w_506.jpg 506w,
+            /static/img/chicken_curry/chicken_curry_h1d0ju_c_scale,w_580.jpg 580w,
+            /static/img/chicken_curry/chicken_curry_h1d0ju_c_scale,w_662.jpg 662w,
+            /static/img/chicken_curry/chicken_curry_h1d0ju_c_scale,w_734.jpg 734w,
+            /static/img/chicken_curry/chicken_curry_h1d0ju_c_scale,w_798.jpg 798w,
+            /static/img/chicken_curry/chicken_curry_h1d0ju_c_scale,w_861.jpg 861w,
+            /static/img/chicken_curry/chicken_curry_h1d0ju_c_scale,w_924.jpg 924w,
+            /static/img/chicken_curry/chicken_curry_h1d0ju_c_scale,w_984.jpg 984w,
+            /static/img/chicken_curry/chicken_curry_h1d0ju_c_scale,w_1045.jpg 1045w,
+            /static/img/chicken_curry/chicken_curry_h1d0ju_c_scale,w_1104.jpg 1104w,
+            /static/img/chicken_curry/chicken_curry_h1d0ju_c_scale,w_1161.jpg 1161w,
+            /static/img/chicken_curry/chicken_curry_h1d0ju_c_scale,w_1211.jpg 1211w,
+            /static/img/chicken_curry/chicken_curry_h1d0ju_c_scale,w_1261.jpg 1261w,
+            /static/img/chicken_curry/chicken_curry_h1d0ju_c_scale,w_1316.jpg 1316w,
+            /static/img/chicken_curry/chicken_curry_h1d0ju_c_scale,w_1363.jpg 1363w,
+            /static/img/chicken_curry/chicken_curry_h1d0ju_c_scale,w_1389.jpg 1389w,
+            /static/img/chicken_curry/chicken_curry_h1d0ju_c_scale,w_1400.jpg 1400w"
+            src="/static/img/chicken_curry/chicken_curry_h1d0ju_c_scale,w_1400.jpg"
+        alt="pic">
         <section class="col-sm-6">
             <h2>Ingredients:</h2>
             <ol>{% for ingredient in recipe.checkboxes %}
