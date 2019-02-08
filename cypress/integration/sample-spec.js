@@ -16,17 +16,17 @@ describe('homepage', function() {
     cy.get('#add_recipe').click();
   });
 
-  it('click on Categories', () => {
-    cy.get('#add_category').click();
-  });
+  // it('click on Categories', () => {
+  //   cy.get('#add_category').click();
+  // });
 
-  it('click on Ingredients', () => {
-    cy.get('#add_ingredient').click();
-  });
+  // it('click on Ingredients', () => {
+  //   cy.get('#add_ingredient').click();
+  // });
 
-  it('click on Allergens', () => {
-    cy.get('#add_allergen').click();
-  });
+  // it('click on Allergens', () => {
+  //   cy.get('#add_allergen').click();
+  // });
 
   // it('can take a screenshot', function(){
   //   cy.screenshot('site', {capture: 'runner'});
