@@ -93,6 +93,27 @@ def add_recipe():
         allergens2=mongo.db.allergens.find()
     )
 
+@app.route('/edit_recipe/<recipe_id>')
+def edit_recipe(recipe_id):
+    return render_template('edit_recipe.html',
+    title='Edit Recipe',
+    recipe=mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)}),
+    categoriesx=mongo.db.categories.find(),
+    ingredientsx=mongo.db.ingredients.find(),
+    allergensx=mongo.db.allergens.find()
+)
+
+@app.route('/update_recipe/<recipe_id>', methods=["POST"])
+def update_recipe(recipe_id):
+    recipes = mongo.db.recipes
+    recipes.update( {'_id': ObjectId(recipe_id)},
+    {
+        'recipe_name':request.form.get['recipe_name'],
+        'category_name':request.form.get['category_name'],
+        'allergen_name':request.form.get['allergen_name'],
+    })
+    return redirect(url_for('get_recipes'))
+
 @app.route('/insert_category', methods=['POST'])
 def insert_category():
     categories = mongo.db.categories
