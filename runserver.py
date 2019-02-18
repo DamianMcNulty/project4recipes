@@ -29,8 +29,7 @@ def get_recipes():
         year=datetime.now().year,
         recipes=mongo.db.recipes.find(),
         categories=mongo.db.categories.find(),
-        ingredients=mongo.db.ingredients.find(),
-        allergens=mongo.db.allergens.find()
+        ingredients=mongo.db.ingredients.find()
     )
 
 @app.route('/add_category')
@@ -65,21 +64,9 @@ def settings():
         message='Settings',
         recipes=mongo.db.recipes.find(),
         categories1=mongo.db.categories.find(),
-        ingredients1=mongo.db.ingredients.find(),
-        allergens1=mongo.db.allergens.find()
+        ingredients1=mongo.db.ingredients.find()
     )
     
-@app.route('/add_allergen')
-def add_allergen():
-    """Renders the add allergen page."""
-    return render_template(
-        'add_allergen.html',
-        title='Add allergens',
-        year=datetime.now().year,
-        message='Add an allergen',
-        allergens=mongo.db.allergens.find()
-    )
-
 @app.route('/add_recipe')
 def add_recipe():
     """Renders the add recipe page."""
@@ -89,28 +76,8 @@ def add_recipe():
         year=datetime.now().year,
         message='Add a recipe here',
         categories2=mongo.db.categories.find(),
-        ingredients2=mongo.db.ingredients.find(),
-        allergens2=mongo.db.allergens.find()
+        ingredients2=mongo.db.ingredients.find()
     )
-
-@app.route('/edit_recipe/<recipe_id>')
-def edit_recipe(recipe_id):
-    return render_template('edit_recipe.html',
-    title='Edit Recipe',
-    recipe=mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)}),
-    categoriesx=mongo.db.categories.find(),
-    ingredientsx=mongo.db.ingredients.find(),
-    allergensx=mongo.db.allergens.find()
-)
-
-@app.route('/update_recipe/<recipe_id>', methods=["POST"])
-def update_recipe(recipe_id):
-    recipes = mongo.db.recipes
-    recipes.update( {'_id': ObjectId(recipe_id)},
-    {
-        'recipe_name':request.form.get['recipe_name']
-    })
-    return redirect(url_for('get_recipes'))
 
 @app.route('/insert_category', methods=['POST'])
 def insert_category():
@@ -125,23 +92,11 @@ def insert_ingredient():
     ingredient_doc = {'ingredient_name': request.form['ingredient_name']}
     ingredients.insert_one(ingredient_doc)
     return redirect(url_for('add_ingredient'))
-    
-@app.route('/insert_allergen', methods=['POST'])
-def insert_allergen():
-    allergens = mongo.db.allergens
-    allergen_doc = {'allergen_name': request.form['allergen_name']}
-    allergens.insert_one(allergen_doc)
-    return redirect(url_for('add_allergen'))
 
 @app.route('/insert_recipe', methods=['POST'])
 def insert_recipe():
     recipes =  mongo.db.recipes
     recipes.insert_one(request.form.to_dict(flat=False))
-    # result = {
-    #     key: value[0] if len(value) == 1 else value
-    #     for key, value in request.form.iterlists()
-    # }
-    # recipes.insert_one(result)
     return redirect(url_for('add_recipe'))
 
 @app.route('/delete_recipe/<recipe_id>')
@@ -153,11 +108,6 @@ def delete_recipe(recipe_id):
 def delete_ingredient(ingredient_id):
     mongo.db.ingredients.remove({'_id': ObjectId(ingredient_id)})
     return redirect(url_for('add_ingredient'))
-    
-@app.route('/delete_allergen/<allergen_id>')
-def delete_allergen(allergen_id):
-    mongo.db.allergens.remove({'_id': ObjectId(allergen_id)})
-    return redirect(url_for('add_allergen'))
 
 @app.route('/delete_category/<category_id>')
 def delete_category(category_id):

@@ -27,30 +27,6 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
-                        <a class="dropdown-toggle" type="button" data-toggle="dropdown">Ingredients
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            {% for ingredient in ingredients %}
-                            <li>
-                                <a class="btn-filter" data-target="{{ingredient.ingredient_name}}">{{ingredient.ingredient_name}}</a>
-                            </li>
-                            {% endfor %}
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" type="button" data-toggle="dropdown">Allergens
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            {% for allergen in allergens %}
-                            <li class="">
-                                <a class="btn-filter" data-target="{{allergen.allergen_name}}">{{allergen.allergen_name}}</a>
-                            </li>
-                            {% endfor %}
-                        </ul>      
-                    </li>
-                    <li class="dropdown">
                         <a class="dropdown-toggle" type="button" data-toggle="dropdown">Meal
                             <span class="caret"></span>
                         </a>
@@ -65,7 +41,7 @@
                             </li>
                         </ul> 
                     </li>
-                    <li><a id="add_recipe" href="{{ url_for('add_recipe') }}">Recipes</a></li>
+                    <li><a id="add_recipe" href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
                     <li><a id="settings" href="{{ url_for('settings') }}">Settings</a></li>
                 </ul>
             </div>

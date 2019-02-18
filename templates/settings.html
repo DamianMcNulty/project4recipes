@@ -3,16 +3,7 @@
 {% block content %}
 <div class="row">
     <div class="col-md-4">
-        <ul class="lsn">
-            {% for ingredient in ingredients1 %}
-            <li>
-                {{ingredient.ingredient_name}}
-                <a href="{{url_for('delete_ingredient', ingredient_id =ingredient._id)}}" class="fas fa-trash"> Remove</a>
-            </li>
-            {% endfor %}
-        </ul>
-    </div>
-    <div class="col-md-4">
+        <h2 class="text-center">Ingredients</h2>
         <form action="{{ url_for('insert_ingredient') }}" method="POST" class="form-horizontal">
             <fieldset>
                 <div class="form-group">
@@ -23,9 +14,18 @@
                     </div>
                 </div>
             </fieldset>
-            </form>
         </form>
-        
+        <ul class="lsn">
+            {% for ingredient in ingredients1 %}
+            <li>
+                {{ingredient.ingredient_name}}
+                <a href="{{url_for('delete_ingredient', ingredient_id =ingredient._id)}}" class="fas fa-trash pull-right"> Remove</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="col-md-4">
+            <h2 class="text-center">Categories</h2>
         <form action="{{ url_for('insert_category') }}"  method="POST" class="form-horizontal">
             <fieldset>
                 <div class="form-group">
@@ -37,52 +37,28 @@
                 </div>
             </fieldset>
         </form>
-        
-        <form action="{{ url_for('insert_allergen') }}" method="POST" class="form-horizontal">
-            <fieldset>
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="ingredient_name">Allergen</label>
-                    <div class="col-md-5">
-                        <input id="allergen_name" name="allergen_name" type="text" placeholder="Add an allergen" class="form-control input-md">
-                        <button name="action" class="fas fa-plus"> Add</button>
-                    </div>
-                </div>
-            </fieldset>
-            </form>
-        </form>
-    </div>
-    <div class="col-md-4">
-        <ul class="lsn">
-            {% for allergen in allergens1 %}
+        <ul class="List__link">
+            {% for category in categories1 %}
             <li>
-                {{allergen.allergen_name}}
-                <a href="{{url_for('delete_allergen', allergen_id =allergen._id)}}" class="fas fa-trash"> Remove</a>
+                {{category.category_name}}
+                <a href="{{url_for('delete_category', category_id =category._id)}}" class="fas fa-trash pull-right"> Remove</a>
             </li>
             <br>
             {% endfor %}
         </ul>
     </div>
-</div>
-<div class="col-md-12">
-    <ul class="List__link">
-        {% for category in categories1 %}
-        <li>
-            {{category.category_name}}
-            <a href="{{url_for('delete_category', category_id =category._id)}}" class="fas fa-trash"> Remove</a>
-        </li>
-        <br>
-        {% endfor %}
-    </ul>
-</div>
-<div class="col-md-6 col-md-offset-3 pr">
-    {% for recipe in recipes %}
-    <div class="panel panel-default">
-        <div class="panel-body" data-status="{% for cat in recipe.category_name %}{{cat}}{% endfor %}">                 
-            <a class="center mb2" href="{{url_for('recipe_detail', recipe_id=recipe._id)}}">{% for name in recipe.recipe_name %}{{name}}{% endfor %}</a>
-            <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="pull-right fas fa-trash"> Remove</a>
-            <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="pull-right fas fa-trash"> Edit</a>
+    <div class="col-md-4 pr">
+        <h2 class="text-center">Recipes</h2>
+        {% for recipe in recipes %}
+        <div class="panel panel-default">
+            <div class="panel-body" data-status="{% for cat in recipe.category_name %}{{cat}}{% endfor %}">                 
+                <a class="center mb2" href="{{url_for('recipe_detail', recipe_id=recipe._id)}}">{% for name in recipe.recipe_name %}{{name}}{% endfor %}</a>
+                <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="pull-right fas fa-trash"> Remove</a>
+            </div>
         </div>
+        {% endfor %}             
     </div>
-    {% endfor %}             
 </div>
+
+
 {% endblock %}
