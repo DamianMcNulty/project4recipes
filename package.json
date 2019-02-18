@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cy:open": "cypress open"
+    "cy:open": "cypress open",
+    "cy:run": "cypress run --record --key 37281c8e-f155-413c-9ca3-4922c623a46d"
   },
   "repository": {
     "type": "git",
