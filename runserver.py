@@ -108,9 +108,7 @@ def update_recipe(recipe_id):
     recipes = mongo.db.recipes
     recipes.update( {'_id': ObjectId(recipe_id)},
     {
-        'recipe_name':request.form.get['recipe_name'],
-        'category_name':request.form.get['category_name'],
-        'allergen_name':request.form.get['allergen_name'],
+        'recipe_name':request.form.get['recipe_name']
     })
     return redirect(url_for('get_recipes'))
 
@@ -139,6 +137,11 @@ def insert_allergen():
 def insert_recipe():
     recipes =  mongo.db.recipes
     recipes.insert_one(request.form.to_dict(flat=False))
+    # result = {
+    #     key: value[0] if len(value) == 1 else value
+    #     for key, value in request.form.iterlists()
+    # }
+    # recipes.insert_one(result)
     return redirect(url_for('add_recipe'))
 
 @app.route('/delete_recipe/<recipe_id>')

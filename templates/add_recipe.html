@@ -1,15 +1,13 @@
-{% extends "layout.html" %} {% block content %}
+{% extends "layout.html" %}
+{% block content %}
 <form action="{{ url_for('insert_recipe') }}" method="POST" class="form-horizontal border">
     <fieldset>
-        <!-- Text input-->
         <div class="form-group">
             <label class="col-md-4 control-label" for="recipe_name">Name</label>
             <div class="col-md-5">
                 <input id="recipe_name" name="recipe_name" type="text" placeholder="Add a name" class="form-control input-md">
             </div>
         </div>
-
-        <!-- Select Basic -->
         <div class="form-group">
             <label class="col-md-4 control-label" for="category_name">Categories</label>
             <div class="col-md-5">
@@ -21,8 +19,6 @@
                 </select>
             </div>
         </div>
-        
-        <!-- Select Basic -->
         <div class="form-group">
             <label class="col-md-4 control-label" for="allergen_name">Allergens</label>
             <div class="col-md-5">
@@ -34,9 +30,6 @@
                 </select>
             </div>
         </div>
-
-
-        <!-- Multiple Checkboxes -->
         <div class="form-group">
             <label class="col-md-4 control-label" for="checkboxes">Ingredients</label>
             <div class="col-md-4">
@@ -49,40 +42,30 @@
                 {% endfor %}
             </div>
         </div>
-
-
-        <!-- Textarea -->
         <div class="form-group">
             <label class="col-md-4 control-label" for="recipe_ingredients1">Step 1</label>
             <div class="col-md-4">
                 <textarea class="form-control" id="recipe_ingredients1" name="recipe_ingredients1" placeholder="Enter instructions here"></textarea>
             </div>
         </div>
-
-        <!-- Textarea -->
         <div class="form-group">
             <label class="col-md-4 control-label" for="recipe_ingredients2">Step 2</label>
             <div class="col-md-4">
                 <textarea class="form-control" id="recipe_ingredients2" name="recipe_ingredients2" placeholder="Enter instructions here"></textarea>
             </div>
         </div>
-
-        <!-- Textarea -->
         <div class="form-group">
             <label class="col-md-4 control-label" for="recipe_ingredients3">Step 3</label>
             <div class="col-md-4">
                 <textarea class="form-control" id="recipe_ingredients3" name="recipe_ingredients3" placeholder="Enter instructions here"></textarea>
             </div>
         </div>
-
-        <!-- Button -->
         <div class="form-group">
             <label class="col-md-4 control-label" for="action">Add Recipe</label>
             <div class="col-md-4">
                 <button id="action" name="action" class="btn btn-success">Add</button>
             </div>
         </div>
-
     </fieldset>
 </form>
 
