@@ -113,7 +113,10 @@ see wireframes folder
 [(Back to top)](#table-of-contents)
 
     npm i
+    python runserver.py
     npm run cy:open
+
+    python test.py
 
 ## Deployment
 
