@@ -28,17 +28,11 @@
 
 ### User Stories
 
-1.  As a user, I can input a new ingredient and add it to the database.
-2.  As a user, I can input a new category and add it to the database.
-3.  As a user, I can imput a new allergen and add it to the database.
-4.  As a user, I can input a new recipe and add it to the database.
-5.  As a user, I can filter a list of recipes by meal.
-6.  As a user, I can filter a list of recipes by selecting one or more ingredients.
-7.  As a user, I can filter a list of recipes not containing one or more allergens.
-8.  As a user, I can sort a list of recipes by number of upvotes.
-9.  As a user, I can view detailed info about each recipe
-10. As a user, I can edit and delete recipes
-11. As a user, I can log in with a username
+1.  As a user, I can input a new ingredient, add it to the database and delete it.
+2.  As a user, I can input a new category, add it to the database and delete it.
+3.  As a user, I can input a new recipe, add it to the database and delete it.
+4.  As a user, I can filter a list of recipes by meal.
+5.  As a user, I can view detailed info about each recipe
 
 ### Wireframes
 
