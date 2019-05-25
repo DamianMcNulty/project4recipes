@@ -84,14 +84,14 @@ def insert_category():
     categories = mongo.db.categories
     category_doc = {'category_name': request.form['category_name']}
     categories.insert_one(category_doc)
-    return redirect(url_for('add_category'))
+    return redirect(url_for('settings'))
 
 @app.route('/insert_ingredient', methods=['POST'])
 def insert_ingredient():
     ingredients = mongo.db.ingredients
     ingredient_doc = {'ingredient_name': request.form['ingredient_name']}
     ingredients.insert_one(ingredient_doc)
-    return redirect(url_for('add_ingredient'))
+    return redirect(url_for('settings'))
 
 @app.route('/insert_recipe', methods=['POST'])
 def insert_recipe():
@@ -107,12 +107,12 @@ def delete_recipe(recipe_id):
 @app.route('/delete_ingredient/<ingredient_id>')
 def delete_ingredient(ingredient_id):
     mongo.db.ingredients.remove({'_id': ObjectId(ingredient_id)})
-    return redirect(url_for('add_ingredient'))
+    return redirect(url_for('settings'))
 
 @app.route('/delete_category/<category_id>')
 def delete_category(category_id):
     mongo.db.categories.remove({'_id': ObjectId(category_id)})
-    return redirect(url_for('add_category'))
+    return redirect(url_for('settings'))
 
 @app.route('/recipe_detail/<recipe_id>')
 def recipe_detail(recipe_id):
