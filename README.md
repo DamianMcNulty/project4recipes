@@ -68,37 +68,23 @@
 
 [(Back to top)](#table-of-contents)
 
+### install
+
+    pip install flask pymongo Flask-PyMongo
+    pip3 freeze --local > requirements.txt
+
 ### windows
 
+    setx /m DEVELOPMENT True
+    setx /m SECRET_KEY "..."
+    setx /m MONGO_DBNAME "..."
+    setx /m MONGO_URI '...'
     pip install virtualenv
     python -m virtualenv env
     .\env\Scripts\activate
     pip install -r requirements.txt
     python runserver.py
     .\env\Scripts\deactivate
-
-### Cloud9
-
-    sudo pip3 install flask
-    export DEVELOPMENT=True
-    export SECRET_KEY="..."
-    export MONGO_DBNAME="..."
-    export MONGO_URI='...'
-    sudo pip3 install pymongo
-    sudo pip3 install Flask-PyMongo
-    pip3 freeze --local > requirements.txt
-    echo 'alias run="python3 ~/workspace/project4recipes/runserver.py"' >> ~/.bash_aliases
-    source ~/.bash_aliases
-    run
-
-.env
-
-    echo "SECRET_KEY='...'" > .env
-    echo "export DEVELOPMENT=True" >> .env
-    echo 'export MONGO_DBNAME="..."' >> .env
-    echo 'export MONGO_URI="..."' >> .env
-    echo ".env" >> .gitignore
-    source .env
 
 ## Local Testing
 
