@@ -40,7 +40,7 @@ see wireframes folder
 
 ## Architecture diagram
 
-<img src="https://github.com/DamianMcNulty/project4recipes/blob/master/wireframes/architecture_diagram.png" width=30%  alt="Architecture">
+<img src="https://github.com/DamianMcNulty/project4recipes/blob/master/wireframes/architecture_diagram.png" width=50%  alt="Architecture">
 
 ### Design Demonstration
 
