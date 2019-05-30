@@ -26,7 +26,7 @@ def get_recipes(page=1):
     num=5
     total=mongo.db.recipes.find({}).count()
     numOfPages=math.floor(total/num)
-    range=range(numOfPages)
+    pagerange=range(numOfPages)
     """Renders the home page."""
     return render_template(
        'recipes.html',
@@ -34,7 +34,7 @@ def get_recipes(page=1):
         year=datetime.now().year,
         page=page,
         num=num,
-        range=range,
+        pagerange=pagerange,
         recipes=mongo.db.recipes.find().skip((page-1)*num).limit(num),
         categories=mongo.db.categories.find(),
         ingredients=mongo.db.ingredients.find()
