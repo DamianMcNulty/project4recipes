@@ -23,7 +23,7 @@ def hello():
 @app.route('/home/<int:page>')
 def get_recipes(page=1):
     num=5
-    total=db.recipes.find({}).count()
+    total=mongo.db.recipes.find({}).count()
     numOfPages=math.floor(total/num)
     range=range(numOfPages)
     """Renders the home page."""
