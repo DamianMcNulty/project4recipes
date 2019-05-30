@@ -14,20 +14,9 @@
 <div class="row pr">
   <nav class="center" aria-label="Recipes Page navigation">
     <ul class="pagination">
-      <li class="disabled">
-        <a href="#" aria-label="Previous">
-          <span aria-hidden="true">&laquo;</span>
-        </a>
-      </li>
-      <li class="active"><a href="{{url_for('get_recipes', page=1)}}">1</a></li>
       {% for n in pagerange %}
-        <li><a href="{{url_for('get_recipes', page=n+1)}}">{{ n + 1}}</a></li>
+        <li {% if n == 0 %} class="active"{% endif %}><a href="{{url_for('get_recipes', page=n+1)}}">{{ n + 1}}</a></li>
       {% endfor %}
-      <li>
-        <a href="#" aria-label="Next">
-          <span aria-hidden="true">&raquo;</span>
-        </a>
-      </li>
     </ul>
   </nav>
 </div>
