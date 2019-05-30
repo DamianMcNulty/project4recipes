@@ -27,10 +27,11 @@ def get_recipes():
        'recipes.html',
         title='Home Page',
         year=datetime.now().year,
-        recipes=mongo.db.recipes.find().skip(0).limit(5),
+        recipes=mongo.db.recipes.find().limit(5),
         categories=mongo.db.categories.find(),
         ingredients=mongo.db.ingredients.find()
     )
+
 
 @app.route('/add_category')
 def add_category():
