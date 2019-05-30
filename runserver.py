@@ -21,7 +21,8 @@ def hello():
 
 @app.route('/')
 @app.route('/home')
-def get_recipes(page=1):
+def get_recipes():
+    page=1
     """Renders the home page."""
     return render_template(
        'recipes.html',
