@@ -3,39 +3,33 @@
   <div class="col-md-6 col-md-offset-3">
     {% for recipe in recipes %}
     <div class="panel panel-default p1">
-      <div
-        class="panel-body"
-        data-status="{% for cat in recipe.category_name %}{{ cat }}{% endfor %}"
-      >
-        <a
-          class="center"
-          href="{{url_for('recipe_detail', recipe_id =recipe._id)}}"
-          >{% for name in recipe.recipe_name %}{{ name }}{% endfor %}</a
-        >
+      <div class="panel-body" data-status="{% for cat in recipe.category_name %}{{ cat }}{% endfor %}">
+        <a class="center"
+          href="{{url_for('recipe_detail', recipe_id =recipe._id)}}">{% for name in recipe.recipe_name %}{{ name }}{% endfor %}</a>
       </div>
     </div>
     {% endfor %}
   </div>
 </div>
 <div class="row pr">
-    <nav class="center" aria-label="Recipes Page navigation">
-      <ul class="pagination">
-        <li class="disabled">
-          <a href="#" aria-label="Previous">
-            <span aria-hidden="true">&laquo;</span>
-          </a>
-        </li>
-        <li class="active"><a href="#">1</a></li>
-        <li><a href="{{url_for('recipes')}}">2</a></li>
-        <li><a href="{{url_for('recipes')}}">3</a></li>
-        <li><a href="{{url_for('recipes')}}">4</a></li>
-        <li><a href="{{url_for('recipes')}}">5</a></li>
-        <li>
-          <a href="#" aria-label="Next">
-            <span aria-hidden="true">&raquo;</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
+  <nav class="center" aria-label="Recipes Page navigation">
+    <ul class="pagination">
+      <li class="disabled">
+        <a href="#" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li class="active"><a href="{{url_for('recipes'), page=1}}">1</a></li>
+      <li><a href="{{url_for('recipes'), page=2}}">2</a></li>
+      <li><a href="{{url_for('recipes'), page=3}}">3</a></li>
+      <li><a href="{{url_for('recipes'), page=4}}">4</a></li>
+      <li><a href="{{url_for('recipes'), page=5}}">5</a></li>
+      <li>
+        <a href="#" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
 </div>
 {% endblock %}
