@@ -20,7 +20,7 @@ def hello():
     return "Hello, World!"
 
 @app.route('/')
-@app.route('/home/<page>')
+@app.route('/home/<int:page>')
 def get_recipes(page=1):
     num=5
     """Renders the home page."""
