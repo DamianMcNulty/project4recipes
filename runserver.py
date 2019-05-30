@@ -23,13 +23,15 @@ def hello():
 @app.route('/home')
 def get_recipes():
     page=2
+    num=5
     """Renders the home page."""
     return render_template(
        'recipes.html',
         title='Home Page',
         year=datetime.now().year,
         page=page,
-        recipes=mongo.db.recipes.find().skip((page-1)*5.limit(5),
+        num=num,
+        recipes=mongo.db.recipes.find().skip((page-1)*num).limit(num),
         categories=mongo.db.categories.find(),
         ingredients=mongo.db.ingredients.find()
     )
