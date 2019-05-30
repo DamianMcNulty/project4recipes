@@ -27,4 +27,8 @@ $(document).ready(function () {
       }
     });
 
+    $('.pagination > li').on('click', function(){
+      $(this).toggleClass('active');
+    })
+
  });
