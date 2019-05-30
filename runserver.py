@@ -20,8 +20,20 @@ def hello():
     return "Hello, World!"
 
 @app.route('/')
+@app.route('/home')
+def get_recipes():
+    """Renders the home page."""
+    return render_template(
+       'recipes.html',
+        title='Home Page',
+        year=datetime.now().year,
+        recipes=mongo.db.recipes.find().skip(0).limit(5),
+        categories=mongo.db.categories.find(),
+        ingredients=mongo.db.ingredients.find()
+    )
+
 @app.route('/home/<page>')
-def get_recipes(page=1):
+def get_more_recipes(page):
     """Renders the home page."""
     return render_template(
        'recipes.html',
