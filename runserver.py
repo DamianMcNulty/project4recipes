@@ -23,6 +23,9 @@ def hello():
 @app.route('/home/<int:page>')
 def get_recipes(page=1):
     num=5
+    total=db.recipes.find({}).count()
+    numOfPages=math.floor(total/num)
+    range=[1:numOfPages]
     """Renders the home page."""
     return render_template(
        'recipes.html',
@@ -30,6 +33,7 @@ def get_recipes(page=1):
         year=datetime.now().year,
         page=page,
         num=num,
+        range=range,
         recipes=mongo.db.recipes.find().skip((page-1)*num).limit(num),
         categories=mongo.db.categories.find(),
         ingredients=mongo.db.ingredients.find()

@@ -20,10 +20,9 @@
         </a>
       </li>
       <li class="active"><a href="{{url_for('get_recipes', page=1)}}">1</a></li>
-      <li><a href="{{url_for('get_recipes', page=2)}}">2</a></li>
-      <li><a href="{{url_for('get_recipes', page=3)}}">3</a></li>
-      <li><a href="{{url_for('get_recipes', page=4)}}">4</a></li>
-      <li><a href="{{url_for('get_recipes', page=5)}}">5</a></li>
+      {% for n in range %}
+        <li><a href="{{url_for('get_recipes', page=n+1)}}">{{ n + 1}}</a></li>
+      {% endfor %}
       <li>
         <a href="#" aria-label="Next">
           <span aria-hidden="true">&raquo;</span>
