@@ -27,6 +27,7 @@ def get_recipes():
     return render_template(
        'recipes.html',
         title='Home Page',
+        page=page,
         year=datetime.now().year,
         recipes=mongo.db.recipes.find().skip((page - 1)*5).limit(5),
         categories=mongo.db.categories.find(),
