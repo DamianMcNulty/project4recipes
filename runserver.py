@@ -20,8 +20,8 @@ def hello():
     return "Hello, World!"
 
 @app.route('/')
-@app.route('/home', defaults={'page': 1})
-def get_recipes(page):
+@app.route('/home')
+def get_recipes(page=1):
     """Renders the home page."""
     return render_template(
        'recipes.html',
