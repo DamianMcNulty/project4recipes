@@ -21,7 +21,6 @@ def hello():
 
 @app.route('/')
 @app.route('/home', defaults={'page': 1})
-@app.route('/home/page/<int:page>')
 def get_recipes(page):
     """Renders the home page."""
     return render_template(
