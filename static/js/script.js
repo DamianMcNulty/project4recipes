@@ -9,26 +9,32 @@
 
 $(document).ready(function () {
 
-	$('.star').on('click', function () {
-      $(this).toggleClass('star-checked');
+  $('.star').on('click', function () {
+    $(this).toggleClass('star-checked');
+  });
+
+  $('.ckbox label').on('click', function () {
+    $(this).parents('tr').toggleClass('selected');
+  });
+
+  $('.btn-filter').on('click', function () {
+    var $target = $(this).data('target');
+    if ($target !== 'all') {
+      $('.panel-body').css('display', 'none');
+      $('.panel-body[data-status="' + $target + '"]').fadeIn('slow');
+    } else {
+      $('.panel-body').css('display', 'none').fadeIn('slow');
+    }
+  });
+
+  var header = document.getElementById("pagination");
+  var btns = header.getElementsByClassName("item");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function () {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
     });
+  }
 
-    $('.ckbox label').on('click', function () {
-      $(this).parents('tr').toggleClass('selected');
-    });
-
-    $('.btn-filter').on('click', function () {
-      var $target = $(this).data('target');
-      if ($target !== 'all') {
-        $('.panel-body').css('display', 'none');
-        $('.panel-body[data-status="' + $target + '"]').fadeIn('slow');
-      } else {
-        $('.panel-body').css('display', 'none').fadeIn('slow');
-      }
-    });
-
-    $('.pagination li').on('click', function(){
-      $(this).toggleClass('active');
-    })
-
- });
+});

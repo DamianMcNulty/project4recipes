@@ -13,9 +13,9 @@
 </div>
 <div class="row pr">
   <nav class="center" aria-label="Recipes Page navigation">
-    <ul class="pagination">
+    <ul id="pagination" class="pagination">
       {% for n in pagerange %}
-        <li {% if n == 0 %} class="active"{% endif %}><a href="{{url_for('get_recipes', page=n+1)}}">{{ n + 1}}</a></li>
+        <li class="item" {% if n == 0 %} this.className += " active" {% endif %}><a href="{{url_for('get_recipes', page=n+1)}}">{{ n + 1}}</a></li>
       {% endfor %}
     </ul>
   </nav>
