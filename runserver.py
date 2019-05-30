@@ -25,7 +25,7 @@ def get_recipes(page=1):
     num=5
     total=db.recipes.find({}).count()
     numOfPages=math.floor(total/num)
-    range=[1:numOfPages]
+    range=range(numOfPages)
     """Renders the home page."""
     return render_template(
        'recipes.html',
