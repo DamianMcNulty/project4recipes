@@ -117,6 +117,8 @@
 [(Back to top)](#table-of-contents)
 
 -   [Add many ingredients](https://stackoverflow.com/questions/45590988/converting-flask-form-data-to-json-only-gets-first-value)
+-   [add an active class to the current element with JavaScript](https://www.w3schools.com/howto/howto_js_active_element.asp)
+-   [add a class name to an element with JavaScript](https://www.w3schools.com/howto/howto_js_add_class.asp)
 
 ## Credits
 

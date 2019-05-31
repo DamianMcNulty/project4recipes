@@ -29,6 +29,7 @@ $(document).ready(function () {
 
   var header = document.getElementById("pagination");
   var btns = header.getElementsByClassName("item");
+  btns[0].classList.add("active");
   for (var i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", function () {
       var current = document.getElementsByClassName("active");
