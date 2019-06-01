@@ -45,12 +45,12 @@
         {% block content %}{% endblock %}
     </main>
     <footer class="navbar navbar-inverse navbar-fixed-bottom">
-        <div class="container">
-            <div class="navbar-header">
+        <div class="container pr">
+            <div class="navbar-header center">
                 <ul class="nav navbar-nav">
-                    <li><a class="pull-left" id="get_recipes" href="{{ url_for('get_recipes') }}">Home</a></li>
+                    <li><a id="get_recipes" href="{{ url_for('get_recipes') }}">Home</a></li>
                     <li><a id="add_recipe" href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
-                    <li><a class="pull-right" id="settings" href="{{ url_for('settings') }}">Settings</a></li>
+                    <li><a id="settings" href="{{ url_for('settings') }}">Settings</a></li>
                 </ul>
             </div>
         </div>
