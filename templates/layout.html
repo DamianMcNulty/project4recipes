@@ -1,11 +1,13 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }} - Project4 Recipes</title>
     <link rel="shortcut icon" href="{{url_for('static', filename='favicon.ico')}}" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
 
@@ -32,25 +34,34 @@
                         </a>
                         <ul class="dropdown-menu">
                             {% for cat in categories %}
-                                <li>
-                                    <a class="btn-filter" data-target="{{cat.category_name}}">{{cat.category_name}}</a>
-                                </li>
+                            <li>
+                                <a class="btn-filter" data-target="{{cat.category_name}}">{{cat.category_name}}</a>
+                            </li>
                             {% endfor %}
                             <li>
                                 <a class="btn-filter" data-target="all">All</a>
                             </li>
-                        </ul> 
+                        </ul>
                     </li>
-                    <li><a id="add_recipe" href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
-                    <li><a id="settings" href="{{ url_for('settings') }}">Settings</a></li>
                 </ul>
             </div>
         </div>
     </header>
 
     <main class="container">
-        {% block content %}{% endblock %}      
+        {% block content %}{% endblock %}
     </main>
+    <footer class="navbar navbar-inverse navbar-fixed-bottom">
+        <div class="container">
+            <div class="navbar-header">
+                <ul class="nav navbar-nav">
+                    <li><a id="get_recipes" href="{{ url_for('get_recipes') }}">Home</a></li>
+                    <li><a id="add_recipe" href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
+                    <li><a id="settings" href="{{ url_for('settings') }}">Settings</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 
     <script src="/static/js/jquery-1.10.2.min.js"></script>
     <script src="/static/js/bootstrap.min.js"></script>
@@ -58,4 +69,5 @@
     {% block scripts %}{% endblock %}
 
 </body>
+
 </html>
