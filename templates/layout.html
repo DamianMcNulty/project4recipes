@@ -23,30 +23,23 @@
             </div>
         </div>
     </header>
-    <header class="navbar navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" type="button" data-toggle="dropdown">Meal
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            {% for cat in categories %}
-                            <li>
-                                <a class="btn-filter" data-target="{{cat.category_name}}">{{cat.category_name}}</a>
-                            </li>
-                            {% endfor %}
-                            <li>
-                                <a class="btn-filter" data-target="all">All</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+    <div class="container">
+        <div class="dropdown">
+            <a class="dropdown-toggle" type="button" data-toggle="dropdown">Meal
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                {% for cat in categories %}
+                <li>
+                    <a class="btn-filter" data-target="{{cat.category_name}}">{{cat.category_name}}</a>
+                </li>
+                {% endfor %}
+                <li>
+                    <a class="btn-filter" data-target="all">All</a>
+                </li>
+            </ul>
         </div>
-    </header>
-
+    </div>
     <main class="container">
         {% block content %}{% endblock %}
     </main>
