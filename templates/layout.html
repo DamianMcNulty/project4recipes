@@ -23,19 +23,17 @@
             </div>
         </div>
     </header>
-    <div class="container pr">
-        <div class="center">
-            <ul class="nav nav-pills">
-                {% for cat in categories %}
-                <li>
-                    <a class="btn-filter" data-target="{{cat.category_name}}">{{cat.category_name}}</a>
-                </li>
-                {% endfor %}
-                <li>
-                    <a class="btn-filter" data-target="all">All</a>
-                </li>
-            </ul>
-        </div>
+    <div class="container">
+        <ul class="nav nav-justified nav-pills">
+            {% for cat in categories %}
+            <li>
+                <a class="btn-filter" data-target="{{cat.category_name}}">{{cat.category_name}}</a>
+            </li>
+            {% endfor %}
+            <li>
+                <a class="btn-filter" data-target="all">All</a>
+            </li>
+        </ul>
     </div>
     <main class="container">
         {% block content %}{% endblock %}
