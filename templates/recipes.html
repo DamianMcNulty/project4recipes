@@ -6,7 +6,7 @@
       <div class="panel-body" data-status="{% for cat in recipe.category_name %}{{ cat }}{% endfor %}">
         <span class="fas fa-thumbs-up"></span> {{ recipe.likes }} 
         <a class="center"
-          href="{{url_for('recipe_detail', recipe_id =recipe._id)}}">{% for name in recipe.recipe_name %} {{ name }}{% endfor %}</a>
+          href="{{url_for('recipe_detail', recipe_id =recipe._id)}}">{{ recipe.name }}</a>
       </div>
     </div>
     {% endfor %}
