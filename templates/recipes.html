@@ -5,7 +5,7 @@
     <div class="panel panel-default p1">
       <div class="panel-body" data-status="{% for cat in recipe.category_name %}{{ cat }}{% endfor %}">
         <a class="center"
-          href="{{url_for('recipe_detail', recipe_id =recipe._id)}}">{% for name in recipe.recipe_name %}{{ likes }} likes S{{ name }}{% endfor %}</a>
+          href="{{url_for('recipe_detail', recipe_id =recipe._id)}}">{{ likes }} likes {% for name in recipe.recipe_name %}S{{ name }}{% endfor %}</a>
       </div>
     </div>
     {% endfor %}
