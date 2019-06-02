@@ -4,7 +4,10 @@
 <header>
         <h1 class="fs2 mb2 text-center">
             {% for name in recipe.recipe_name %}{{name}}{% endfor %}
-            <a aria-hidden="true"><span class="fas fa-thumbs-up"></span> {{ recipe.likes }}</a>
+            <form action="{{ url_for('recipe_detail') }}" method="POST" class="form-horizontal border">
+                <!-- <a aria-hidden="true"><span class="fas fa-thumbs-up"></span> {{ recipe.likes }}</a> -->
+                <button name="action" class="fas fa-thumbs-up"> {{ recipe.likes }}</button>
+            </form>
         </h1>
     </header>
     <main>

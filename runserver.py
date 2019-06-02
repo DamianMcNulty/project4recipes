@@ -128,6 +128,13 @@ def recipe_detail(recipe_id):
     return render_template('recipe_detail.html',
     recipe=mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)}))
 
+@app.route('/recipe_detail/<recipe_id>', methods=['POST'])
+def recipe_detail(recipe_id):
+    recipe=mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
+    recipe.like += 1
+    return render_template('recipe_detail.html',
+    recipe=recipe)
+
 
 if environ.get('DEVELOPMENT'):
     development = True
