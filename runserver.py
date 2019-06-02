@@ -123,13 +123,14 @@ def delete_category(category_id):
     mongo.db.categories.remove({'_id': ObjectId(category_id)})
     return redirect(url_for('settings'))
 
-# @app.route('/recipe_detail/<recipe_id>')
-# def recipe_detail(recipe_id):
-#     return render_template('recipe_detail.html',
-#     recipe=mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)}))
-
-@app.route('/recipe_detail/<recipe_id>', methods=['POST', 'GET'])
+@app.route('/recipe_detail/<recipe_id>')
 def recipe_detail(recipe_id):
+    return render_template('recipe_detail.html',
+    recipe=mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)}))
+
+@app.route('/recipe_detail_like/<recipe_id>', methods=['POST'])
+def recipe_detail(recipe_id):
+    mongo.db.recipes.update({'_id': ObjectId(recipe_id)}, {$set: { "likes": 5 } })
     recipe=mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
     return render_template('recipe_detail.html',
     recipe=recipe)
