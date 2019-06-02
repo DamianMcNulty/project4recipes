@@ -13,7 +13,7 @@
 
 </head>
 
-<body class="mt150">
+<body class="mt100">
     <header class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -33,18 +33,18 @@
                     </li>
                     {% endfor %}
                     <li>
-                        <a class="btn-filter" data-target="all">All</a>
+                        <a class="btn-filter active" data-target="all">All</a>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
-    <main class="container">
+    <main class="container mt40">
         {% block content %}{% endblock %}
     </main>
     <footer class="navbar navbar-inverse navbar-fixed-bottom">
-        <div class="container">
-            <div class="navbar-header">
+        <div class="container pr">
+            <div class="navbar-header center">
                 <ul class="nav navbar-nav">
                     <li><a id="get_recipes" href="{{ url_for('get_recipes') }}">Home</a></li>
                     <li><a id="add_recipe" href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
