@@ -24,16 +24,18 @@
         </div>
     </header>
     <div class="container pr">
-        <ul class="nav nav-pills center">
-            {% for cat in categories %}
-            <li>
-                <a class="btn-filter" data-target="{{cat.category_name}}">{{cat.category_name}}</a>
-            </li>
-            {% endfor %}
-            <li>
-                <a class="btn-filter" data-target="all">All</a>
-            </li>
-        </ul>
+        <div class="center">
+            <ul class="nav nav-pills">
+                {% for cat in categories %}
+                <li>
+                    <a class="btn-filter" data-target="{{cat.category_name}}">{{cat.category_name}}</a>
+                </li>
+                {% endfor %}
+                <li>
+                    <a class="btn-filter" data-target="all">All</a>
+                </li>
+            </ul>
+        </div>
     </div>
     <main class="container">
         {% block content %}{% endblock %}
