@@ -131,7 +131,7 @@ def delete_category(category_id):
 @app.route('/recipe_detail/<recipe_id>', methods=['POST', 'GET'])
 def recipe_detail(recipe_id):
     recipe=mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
-    console.log(recipe)
+    print(recipe)
     # recipe.likes += 1
     return render_template('recipe_detail.html',
     recipe=recipe)
