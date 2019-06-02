@@ -4,7 +4,7 @@
 <header>
         <h1 class="fs2 mb2 text-center">
             {% for name in recipe.recipe_name %}{{name}}{% endfor %}
-            <a class="fas fa-star" aria-hidden="true"> Upvote {{ recipe.likes }}</a>
+            <a class="fas fa-thumbs-up" aria-hidden="true"> Like {{ recipe.likes }}</a>
         </h1>
     </header>
     <main>
