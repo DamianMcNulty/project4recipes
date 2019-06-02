@@ -128,7 +128,7 @@ def delete_category(category_id):
 #     return render_template('recipe_detail.html',
 #     recipe=mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)}))
 
-@app.route('/recipe_detail/<recipe_id>', methods=['POST'])
+@app.route('/recipe_detail/<recipe_id>', methods=['POST', 'GET'])
 def recipe_detail(recipe_id):
     recipe=mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
     recipe.like += 1
