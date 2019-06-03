@@ -1,6 +1,18 @@
 {% extends 'layout.html'%} {% block content %}
 <div class="row">
-  <div class="col-md-6 col-md-offset-3">
+  <div class="col-md-3">
+      <ul class="nav pull-right">
+          {% for cat in categories %}
+          <li>
+              <a class="btn-filter" data-target="{{cat.category_name}}">{{cat.category_name}}</a>
+          </li>
+          {% endfor %}
+          <li>
+              <a class="btn-filter active" data-target="all">All</a>
+          </li>
+      </ul>
+  </div>
+  <div class="col-md-6">
     {% for recipe in recipes %}
     <div class="panel panel-default p1">
       <div class="panel-body" data-status="{% for cat in recipe.category_name %}{{ cat }}{% endfor %}">
