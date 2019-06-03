@@ -20,9 +20,8 @@
     {% for recipe in recipes %}
     <div class="panel panel-default p1">
       <div class="panel-body" data-status="{% for cat in recipe.category_name %}{{ cat }}{% endfor %}">
-        <span class="fas fa-thumbs-up"></span> {{ recipe.likes }} 
         <a class="center"
-          href="{{url_for('recipe_detail', recipe_id =recipe._id)}}">{{ recipe.recipe_name }}</a>
+          href="{{url_for('recipe_detail', recipe_id =recipe._id)}}">{{ recipe.recipe_name }} <span class="badge">{{ recipe.likes }}</span></a>
       </div>
     </div>
     {% endfor %}
