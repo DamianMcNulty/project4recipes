@@ -25,9 +25,8 @@
             </ol>
         </section>
     </div>
-    <form action="{{ url_for('recipe_detail_like', recipe_id =recipe._id) }}" method="POST"
-        class="form-horizontal border">
-        <button name="action" class="fas fa-thumbs-up"> {{ recipe.likes }}</button>
+    <form action="{{ url_for('recipe_detail_like', recipe_id =recipe._id) }}" method="POST" class="pr">
+        <button name="action" class="fas fa-thumbs-up center"> {{ recipe.likes }}</button>
     </form>
 </main>
 {% endblock %}
