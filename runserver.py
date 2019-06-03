@@ -35,7 +35,7 @@ def get_recipes(page=1):
         page=page,
         num=num,
         pagerange=pagerange,
-        recipes=mongo.db.recipes.find().skip((page-1)*num).limit(num),
+        recipes=mongo.db.recipes.find().sort({likes: -1}).skip((page-1)*num).limit(num),
         categories=mongo.db.categories.find(),
         ingredients=mongo.db.ingredients.find()
     )
@@ -126,14 +126,14 @@ def delete_category(category_id):
 @app.route('/recipe_detail/<recipe_id>')
 def recipe_detail(recipe_id):
     return render_template('recipe_detail.html',
-    recipe=mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})).sort({likes: -1})
+    recipe=mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)}))
 
 @app.route('/recipe_detail_like/<recipe_id>', methods=['POST'])
 def recipe_detail_like(recipe_id):
-    recipe = mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)}).sort({likes: -1})
+    recipe = mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
     num = recipe.get("likes") + 1
     mongo.db.recipes.update({'_id': ObjectId(recipe_id)}, {"$set": {"likes": num} } )
-    recipe=mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)}).sort({likes: -1})
+    recipe=mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
     return render_template('recipe_detail.html',
     recipe=recipe)
     return redirect(url_for('recipe_detail_like'))
