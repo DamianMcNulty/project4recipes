@@ -28,13 +28,11 @@
     </main>
     <footer class="navbar navbar-inverse navbar-fixed-bottom">
         <div class="container pr">
-            <div class="navbar-header center">
-                <ul class="nav navbar-nav list-inline">
-                    <li><a class="fas fa-home" id="get_recipes" href="{{ url_for('get_recipes') }}"> Home</a></li>
-                    <li><a class="fa fa-plus-circle" id="add_recipe" href="{{ url_for('add_recipe') }}"> Add Recipe</a></li>
-                    <li><a class="fas fa-cog" id="settings" href="{{ url_for('settings') }}"> Settings</a></li>
-                </ul>
-            </div>
+            <ul class="nav navbar-nav list-inline center">
+                <li><a class="fas fa-home" id="get_recipes" href="{{ url_for('get_recipes') }}"> Home</a></li>
+                <li><a class="fa fa-plus-circle" id="add_recipe" href="{{ url_for('add_recipe') }}"> Add Recipe</a></li>
+                <li><a class="fas fa-cog" id="settings" href="{{ url_for('settings') }}"> Settings</a></li>
+            </ul>
         </div>
     </footer>
 
