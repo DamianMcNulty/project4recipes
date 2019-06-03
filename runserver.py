@@ -129,7 +129,7 @@ def recipe_detail(recipe_id):
     recipe=mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)}))
 
 @app.route('/recipe_detail_like/<recipe_id>', methods=['POST'])
-def recipe_detail(recipe_id):
+def recipe_detail_like(recipe_id):
     recipe = mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
     num = recipe.likes + 1
     mongo.db.recipes.updateOne({'_id': ObjectId(recipe_id)}, { "likes": num } )
