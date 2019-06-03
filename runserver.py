@@ -132,7 +132,7 @@ def recipe_detail(recipe_id):
 def recipe_detail_like(recipe_id):
     # recipe = mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
     # num = recipe.likes + 1
-    mongo.db.recipes.updateOne({'_id': ObjectId(recipe_id)}, {"$set": {"likes": 3} } )
+    mongo.db.recipes.update({'_id': ObjectId(recipe_id)}, {"$set": {"likes": 3} } )
     recipe=mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
     return render_template('recipe_detail.html',
     recipe=recipe)
