@@ -23,22 +23,6 @@
             </div>
         </div>
     </header>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-                <ul class="nav nav-justified nav-pills">
-                    {% for cat in categories %}
-                    <li>
-                        <a class="btn-filter" data-target="{{cat.category_name}}">{{cat.category_name}}</a>
-                    </li>
-                    {% endfor %}
-                    <li>
-                        <a class="btn-filter active" data-target="all">All</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
     <main class="container mt40">
         {% block content %}{% endblock %}
     </main>
