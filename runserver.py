@@ -126,14 +126,14 @@ def delete_category(category_id):
 @app.route('/recipe_detail/<recipe_id>')
 def recipe_detail(recipe_id):
     return render_template('recipe_detail.html',
-    recipe=mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)}))
+    recipe=mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})).sort({likes: -1})
 
 @app.route('/recipe_detail_like/<recipe_id>', methods=['POST'])
 def recipe_detail_like(recipe_id):
-    recipe = mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
+    recipe = mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)}).sort({likes: -1})
     num = recipe.get("likes") + 1
     mongo.db.recipes.update({'_id': ObjectId(recipe_id)}, {"$set": {"likes": num} } )
-    recipe=mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
+    recipe=mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)}).sort({likes: -1})
     return render_template('recipe_detail.html',
     recipe=recipe)
     return redirect(url_for('recipe_detail_like'))
