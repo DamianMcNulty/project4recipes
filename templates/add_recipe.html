@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block content %}
-<form action="{{ url_for('insert_recipe') }}" method="POST" class="form-horizontal border">
+<form class="detail" action="{{ url_for('insert_recipe') }}" method="POST" class="form-horizontal border">
     <fieldset>
         <div class="form-group">
             <label class="col-md-4 control-label" for="recipe_name">Name</label>
