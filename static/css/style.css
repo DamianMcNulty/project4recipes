@@ -140,7 +140,7 @@ h2 {
   
 \*****************************************/
 .detail {
-    animation: intro 1s forwards 0s ease-in;
+    animation: intro .4s forwards 0s ease-in-out;
   }
 
 /*****************************************\
@@ -165,4 +165,8 @@ h2 {
 
 .h25 {
     height: 25px;
+}
+
+.fs25 {
+    font-size: 25px;
 }
