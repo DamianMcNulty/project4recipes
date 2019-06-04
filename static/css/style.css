@@ -142,3 +142,24 @@ h2 {
 .detail {
     animation: intro 1s forwards 0s ease-in;
   }
+
+/*****************************************\
+  #CLOSE-TITLE
+  
+\*****************************************/
+.t10 {
+    top: 10px;
+}
+
+.r10 {
+    right: 10px;
+}
+
+.pa {
+    position: absolute;
+}
+
+.w25 {
+    width: 25px;
+    height: 25px;
+}
