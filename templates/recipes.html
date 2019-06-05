@@ -3,13 +3,8 @@
   <div class="row">
     <div class="col-md-3">
         <ul class="nav pull-right">
-            {% for cat in categories %}
             <li>
-                <a class="btn-filter" data-target="{{cat.category_name}}">{{cat.category_name}}</a>
-            </li>
-            {% endfor %}
-            <li>
-                <a class="btn-filter active" data-target="all">All</a>
+                <a class="btn-filter active" data-target="all">Reset</a>
             </li>
         </ul>
     </div>
