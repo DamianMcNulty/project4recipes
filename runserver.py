@@ -130,9 +130,8 @@ def recipe_detail(recipe_id):
 
 @app.route('/recipe_detail_like/<recipe_id>', methods=['POST'])
 def recipe_detail_like(recipe_id):
-    recipe = mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
-    num = recipe.get("likes") + 1
-    mongo.db.recipes.update({'_id': ObjectId(recipe_id)}, {"$set": {"likes": num} } )
+    num = 1
+    mongo.db.recipes.update({'_id': ObjectId(recipe_id)}, {"$inc": {"likes": num} } )
     recipe=mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
     return render_template('recipe_detail.html',
     recipe=recipe)
