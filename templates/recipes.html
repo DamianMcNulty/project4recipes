@@ -21,6 +21,7 @@
             href="{{url_for('recipe_detail', recipe_id =recipe._id)}}">{{ recipe.recipe_name }}</a>
             <span class="badge">{{ recipe.likes }}</span>
         </div>
+        <a class="btn-filter" data-target="{{cat.category_name}}">{{cat.category_name}}</a>
       </div>
       {% endfor %}
     </div>
