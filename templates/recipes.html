@@ -23,7 +23,7 @@
       <div class="panel panel-default p1">
         <div class="panel-body" data-status="{% for cat in recipe.category_name %}{{ cat }}{% endfor %}">
           <a class="center"
-            href="{{url_for('recipe_detail', recipe_id =recipe._id)}}">{{ recipe.recipe_name }}</a>
+            href="{{url_for('recipe_detail', recipe_id2 =recipe._id)}}">{{ recipe.recipe_name }}</a>
             <span class="badge">{{ recipe.likes }}</span>
         </div>
         <a class="btn-filter badge" data-target="{{recipe.category_name}}">{{recipe.category_name}}</a>
