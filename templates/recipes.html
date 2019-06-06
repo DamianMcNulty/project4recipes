@@ -4,7 +4,21 @@
     <div class="col-sm-12 col-md-3">
       <a class="btn-filter active badge" data-target="all">Reset all</a>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-3">
+      <h1>Recently Added</h1>
+      {% for recipe in recipes %}
+      <div class="panel panel-default p1">
+        <div class="panel-body" data-status="{% for cat in recipe.category_name %}{{ cat }}{% endfor %}">
+          <a class="center"
+            href="{{url_for('recipe_detail', recipe_id =recipe._id)}}">{{ recipe.recipe_name }}</a>
+            <span class="badge">{{ recipe.likes }}</span>
+        </div>
+        <a class="btn-filter badge" data-target="{{recipe.category_name}}">{{recipe.category_name}}</a>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="col-md-3">
+      <h1>Top recipes</h1>
       {% for recipe in recipes %}
       <div class="panel panel-default p1">
         <div class="panel-body" data-status="{% for cat in recipe.category_name %}{{ cat }}{% endfor %}">
