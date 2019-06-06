@@ -20,12 +20,12 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="col-md-4 control-label" for="checkboxes">Ingredients</label>
+            <label class="col-md-4 control-label" for="recipe_ingredients">Ingredients</label>
             <div class="col-md-4">
                 {% for ingredient in ingredients2 %}
                 <div class="checkbox">
                     <label for="{{ingredient.ingredient_name}}">
-                        <input type="checkbox" name="checkboxes" id="{{ingredient.ingredient_name}}" value="{{ingredient.ingredient_name}}"> {{ingredient.ingredient_name}}
+                        <input type="checkbox" name="recipe_ingredients" id="{{ingredient.ingredient_name}}" value="{{ingredient.ingredient_name}}"> {{ingredient.ingredient_name}}
                     </label>
                 </div>
                 {% endfor %}
