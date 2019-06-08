@@ -20,10 +20,10 @@ $(document).ready(function () {
   $('.btn-filter').on('click', function () {
     var $target = $(this).data('target');
     if ($target !== 'all') {
-      $('.panel-body').css('display', 'none');
-      $('.panel-body[data-status="' + $target + '"]').fadeIn('slow');
+      $('.panel').css('display', 'none');
+      $('.panel[data-status="' + $target + '"]').fadeIn('slow');
     } else {
-      $('.panel-body').css('display', 'none').fadeIn('slow');
+      $('.panel').css('display', 'none').fadeIn('slow');
     }
   });
 
