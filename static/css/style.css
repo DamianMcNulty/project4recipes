@@ -179,3 +179,29 @@ h2 {
 .text-center {
     text-align: center;
 }
+
+/*****************************************\
+  #FOOTER-NAV-TEXT-TITLE
+  
+\*****************************************/
+.nav > li > a {
+    display: inline-block;
+}
+
+/*****************************************
+    #FLEX-TITLE
+    
+  \*****************************************/
+  .flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /*****************************************
+    #LIST-TITLE
+    
+  \*****************************************/
+  .lsn {
+    list-style: none;
+  }
