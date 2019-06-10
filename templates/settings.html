@@ -51,8 +51,8 @@
         <h2 class="text-center">Recipes</h2>
         {% for recipe in recipes %}
         <div class="panel panel-default">
-            <div class="panel-body" data-status="{% for cat in recipe.category_name %}{{cat}}{% endfor %}">                 
-                <a class="center mb2" href="{{url_for('recipe_detail', recipe_id=recipe._id)}}">{% for name in recipe.recipe_name %}{{name}}{% endfor %}</a>
+            <div class="panel-body" data-status="{{ recipe.category_name }}">                 
+                <a class="center mb2" href="{{url_for('recipe_detail', recipe_id=recipe._id)}}">{{ recipe.recipe_name }}</a>
                 <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="pull-right fas fa-trash"> Remove</a>
             </div>
         </div>
