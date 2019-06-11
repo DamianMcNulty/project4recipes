@@ -105,8 +105,20 @@ def insert_ingredient():
 @app.route('/insert_recipe', methods=['POST'])
 def insert_recipe():
     recipes =  mongo.db.recipes
-    recipes.insert_one(request.form.to_dict(flat=False))
-    return redirect(url_for('add_recipe'))
+    recipe_name = request.form['recipe_name']
+    category_name = request.form['category_name']
+    recipe_ingredients = request.form.to_dict(flat=False)['recipe_ingredients']
+    recipe_instructions = request.form.to_dict(flat=False)['recipe_instructions1']
+    recipe_instructions2 = request.form['recipe_instructions2']
+    recipe_instructions3 = request.form['recipe_instructions3']
+    likes = 0
+    if(recipe_instructions2 != ""):
+        recipe_instructions.append(recipe_instructions2)
+    if(recipe_instructions3 != ""):
+        recipe_instructions.append(recipe_instructions3)
+    recipe={'recipe_name': recipe_name, 'category_name': category_name,'recipe_ingredients': recipe_ingredients, 'recipe_instructions': recipe_instructions, 'likes': likes}
+    recipes.insert_one(recipe)
+    return redirect(url_for('get_recipes'))
 
 @app.route('/delete_recipe/<recipe_id>')
 def delete_recipe(recipe_id):
