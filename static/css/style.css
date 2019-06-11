@@ -34,6 +34,14 @@ body {
     margin-top: 40px;
 }
 
+.mb10 {
+    margin-bottom: 10px;
+}
+
+.mb40 {
+    margin-bottom: 40px;
+}
+
 .mb150 {
     margin-bottom: 150px;
 }
@@ -43,7 +51,13 @@ body {
 }
 
 a {
-    color: #106bb9;
+    color: grey;
+    text-decoration: none;
+}
+
+a:hover {
+    color: darkgrey;
+    text-decoration: none;
 }
 
 .m0a {
@@ -83,6 +97,10 @@ h2 {
 
 .fs2 {
     font-size: 2rem;
+}
+
+.fwb {
+    font-weight: bold;
 }
 
 .lsn {
