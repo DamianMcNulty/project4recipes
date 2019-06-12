@@ -128,6 +128,23 @@ def edit_recipe(recipe_id):
     _ingredients = mongo.db.ingredients.find()
     return render_template('edit_recipe.html', recipe=_recipe, categories2=_categories, ingredients2=_ingredients)
 
+@app.route('/update_recipe/<recipe_id>', methods=["POST"])
+def update_recipe(recipe_id):
+    recipes = mongo.db.recipes
+    recipe_name = request.form['recipe_name']
+    category_name = request.form['category_name']
+    recipe_ingredients = request.form.to_dict(flat=False)['recipe_ingredients']
+    recipe_instructions = request.form.to_dict(flat=False)['recipe_instructions1']
+    recipe_instructions2 = request.form['recipe_instructions2']
+    recipe_instructions3 = request.form['recipe_instructions3']
+    likes = int(request.form['likes'])
+    if(recipe_instructions2 != ""):
+        recipe_instructions.append(recipe_instructions2)
+    if(recipe_instructions3 != ""):
+        recipe_instructions.append(recipe_instructions3)
+    recipe = {'recipe_name': recipe_name, 'category_name': category_name, 'recipe_ingredients': recipe_ingredients, 'recipe_instructions': recipe_instructions, 'likes': likes}
+    recipes.update({'_id': ObjectId(recipe_id)}, recipe)
+    return redirect(url_for('get_recipes'))
 
 @app.route('/delete_recipe/<recipe_id>')
 def delete_recipe(recipe_id):
