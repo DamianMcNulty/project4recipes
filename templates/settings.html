@@ -53,6 +53,7 @@
         <div class="panel panel-default">
             <div class="panel-body" data-status="{{ recipe.category_name }}">                 
                 <a class="center mb2" href="{{url_for('recipe_detail', recipe_id=recipe._id)}}">{{ recipe.recipe_name }}</a>
+                <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="pull-right fas fa-trash"> Edit</a>
                 <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="pull-right fas fa-trash"> Remove</a>
             </div>
         </div>

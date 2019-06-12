@@ -8,6 +8,7 @@ from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 
 app = Flask(__name__)
+app.jinja_env.add_extension('jinja2.ext.loopcontrols')
 
 app.secret_key = environ.get('SECRET_KEY')
 app.config["MONGO_DBNAME"] = environ.get('MONGO_DBNAME')
@@ -119,6 +120,14 @@ def insert_recipe():
     recipe={'recipe_name': recipe_name, 'category_name': category_name,'recipe_ingredients': recipe_ingredients, 'recipe_instructions': recipe_instructions, 'likes': likes}
     recipes.insert_one(recipe)
     return redirect(url_for('get_recipes'))
+
+@app.route('/edit_recipe/<recipe_id>')
+def edit_recipe(recipe_id):
+    _recipe = mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
+    _categories = mongo.db.categories.find()
+    _ingredients = mongo.db.ingredients.find()
+    return render_template('edit_recipe.html', recipe=_recipe, categories2=_categories, ingredients2=_ingredients)
+
 
 @app.route('/delete_recipe/<recipe_id>')
 def delete_recipe(recipe_id):
