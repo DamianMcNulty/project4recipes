@@ -223,3 +223,74 @@ h2 {
   .lsn {
     list-style: none;
   }
+
+  body {
+    padding: 1rem;
+  }
+  .tabs {
+    display: inline-block;
+  }
+  
+  .parent {
+  
+  display: grid;
+  
+  grid-template-columns: 1fr 1fr;
+  
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  
+  grid-column-gap: 10px;
+  
+  grid-row-gap: 10px;
+  
+}
+  
+  .parenti {
+  
+  display: grid;
+  
+  grid-template-columns: 1fr 1fr 1fr;
+  
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  
+  grid-column-gap: 10px;
+  
+  grid-row-gap: 10px;
+  
+  }
+  
+  .border {
+    border: 1px grey solid;
+  }
+  
+  .w100 {
+    width: 100px;
+  }
+  
+  .h100 {
+    height: 100px;
+  }
+  
+  .red {
+    background-color: red;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  ul {
+    padding: 0;
+  }
+  
+  .text-center {
+    text-align: center;
+}
+
+.fs_7 {
+  font-size: .9rem;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}

@@ -37,8 +37,8 @@ def get_recipes(page=1):
         num=num,
         pagerange=pagerange,
         recipes=mongo.db.recipes.find().sort("likes", -1).skip((page-1)*num).limit(num),
-        categories=mongo.db.categories.find(),
-        ingredients=mongo.db.ingredients.find()
+        categories1=mongo.db.categories.find(),
+        ingredients1=mongo.db.ingredients.find()
     )
 
 
