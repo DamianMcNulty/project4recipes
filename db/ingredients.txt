@@ -1,0 +1,160 @@
+db.ingredients.insertMany([
+{
+    "ingredient_name" : "vegetable stock",
+    "ingredient_category" : "stock"
+},
+{
+    "ingredient_name" : "Parmesan cheese",
+    "ingredient_category" : "cheese"
+},
+{
+    "ingredient_name" : "whole grain bread",
+    "ingredient_category" : "bread"
+},
+{
+    "ingredient_name" : "paprika",
+    "ingredient_category" : "spice"
+},
+{
+    "ingredient_name" : "black pepper",
+    "ingredient_category" : "spice"
+},
+{
+    "ingredient_name" : "ground lean beef"
+},
+{
+},
+{
+    "ingredient_name" : "onions"
+},
+{
+    "ingredient_name" : "garlic"
+},
+{
+    "ingredient_name" : "ginger"
+},
+{
+    "ingredient_name" : "chilli flakes",
+    "ingredient_category" : "spice"
+},
+{
+    "ingredient_name" : "coconut oil"
+},
+{
+    "ingredient_name" : "coriander",
+    "ingredient_category" : "spice"
+},
+{
+    "ingredient_name" : "beetroot"
+},
+{
+    "ingredient_name" : "arugula"
+},
+{
+    "ingredient_name" : "grapes"
+},
+{
+    "ingredient_name" : "pumpkin seeds"
+},
+{
+    "ingredient_name" : "Dijon mustard"
+},
+{
+    "ingredient_name" : "maple syrup"
+},
+{
+    "ingredient_name" : "olive oil"
+},
+{
+    "ingredient_name" : "brown rice"
+},
+{
+    "ingredient_name" : "peanut butter"
+},
+{
+    "ingredient_name" : "honey"
+},
+{
+    "ingredient_name" : "spring onion"
+},
+{
+    "ingredient_name" : "peppers"
+},
+{
+    "ingredient_name" : "salt"
+},
+{
+    "ingredient_name" : "low sodium soy sauce"
+},
+{
+    "ingredient_name" : "white rice vinegar"
+},
+{
+    "ingredient_name" : "chilli"
+},
+{
+    "ingredient_name" : "chickpeas"
+},
+{
+    "ingredient_name" : "tomatoes"
+},
+{
+    "ingredient_name" : "green beans"
+},
+{
+    "ingredient_name" : "limes"
+},
+{
+    "ingredient_name" : "whole-grain wraps"
+},
+{
+    "ingredient_name" : "lettuce"
+},
+{
+    "ingredient_name" : "low-fat feta cheese"
+},
+{
+    "ingredient_name" : "cucumber"
+},
+{
+    "ingredient_name" : "low-fat yogurt"
+},
+{
+    "ingredient_name" : "lemons"
+},
+{
+    "ingredient_name" : "dried oregano",
+    "ingredient_category" : "spice"
+},
+{
+    "ingredient_name" : "tuna"
+},
+{
+    "ingredient_name" : "eggs"
+},
+{
+    "ingredient_name" : "chicken stock"
+},
+{
+    "ingredient_name" : "turmeric",
+    "ingredient_category" : "spice"
+},
+{
+    "ingredient_name" : "bread"
+},
+{
+    "ingredient_name" : "cumin",
+    "ingredient_category" : "spice"
+},
+{
+    "ingredient_name" : "beans"
+},
+{
+    "ingredient_name" : "sausages"
+},
+{
+    "ingredient_name" : "tuna"
+},
+{
+    "ingredient_name" : "sweetcorn"
+}])

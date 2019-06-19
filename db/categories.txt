@@ -1,0 +1,10 @@
+db.categories.insertMany([
+{
+    "category_name" : "Breakfast"
+},
+{
+    "category_name" : "Lunch"
+},
+{
+    "category_name" : "Dinner"
+}])

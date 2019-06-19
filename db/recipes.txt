@@ -1,0 +1,84 @@
+db.recipes.insertMany([
+{
+    "recipe_name" : "Chicken Curry",
+    "category_name" : "Dinner",
+    "checkboxes" : [ 
+        "onions", 
+        "garlic", 
+        "ginger", 
+        "coriander", 
+        "chilli", 
+        "chicken stock", 
+        "turmeric", 
+        "cumin", 
+        "garam masala"
+    ],
+    "recipe_ingredients1" : [ 
+        "make a curry paste from 2 onions, 2 chillies, 4 cloves of garlic, 25g of ginger and 3 tablespoons  of chicken stock"
+    ],
+    "recipe_ingredients2" : [ 
+        "roast chicken"
+    ],
+    "recipe_ingredients3" : [ 
+        "add 6 tomatoes, 300ml chicken stock, 2 tsp cumin, turmeric and garam masala, juice of half a lemon, and fresh corriander"
+    ],
+    "action" : [ 
+        ""
+    ],
+    "likes" : 0
+},
+
+{
+    "recipe_name" : "Beef Chilli",
+    "category_name" : "Dinner",
+    "checkboxes" : [ 
+        "ground lean beef", 
+        "onions", 
+        "garlic", 
+        "ginger", 
+        "low sodium soy sauce", 
+        "white rice vinegar"
+    ],
+    "recipe_ingredients1" : [ 
+        "Marinade beef with 2 onions , 2 cloves of garlic,  5g ginger, 2 tbsp soy sauce and 2 tbsp white rice vinegar "
+    ],
+    "recipe_ingredients2" : [ 
+        "Stir fry"
+    ],
+    "recipe_ingredients3" : [ 
+        "Serve over green peppers, spring onions and boiled rice"
+    ],
+    "action" : [ 
+        ""
+    ],
+    "likes" : 0
+},
+
+{
+    "recipe_name" : "Tuna Nicoise",
+    "category_name" : "Lunch",
+    "checkboxes" : [ 
+        "Potatoes", 
+        "Olive Oil", 
+        "Eggs", 
+        "Red Wine Vinegar", 
+        "Capers", 
+        "Sunflower Oil", 
+        "Red Onions", 
+        "Spinach", 
+        "Tuna"
+    ],
+    "recipe_ingredients1" : "Roast the potatoes with 2 tsp oil and some seasoning at 200C for 20 mins. Boil eggs.\r\nIn a large salad bowl, whisk together the remaining oil, red wine vinegar, capers and chopped tomatoes. Season, add in the onion, spinach, tuna and potatoes, then gently toss together. Top with the eggs and serve",
+    "recipe_ingredients2" : [ 
+        ""
+    ],
+    "recipe_ingredients3" : [ 
+        ""
+    ],
+    "action" : [ 
+        ""
+    ],
+    "likes" : 0,
+    "cuisine" : "French",
+    "type" : "Seafood"
+}])
