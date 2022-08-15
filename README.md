@@ -34,14 +34,6 @@
 4.  As a user, I can filter a list of recipes by meal.
 5.  As a user, I can view detailed info about each recipe
 
-### Design Demonstration and Wireframes
-
-[Behance](https://www.behance.net/gallery/80866697/Recipe-Manager)
-
-## Architecture diagram
-
-<img src="https://github.com/DamianMcNulty/project4recipes/blob/master/wireframes/architecture_diagram.png" width=50%  alt="Architecture">
-
 ## Technologies Used
 
 1.  [HTML5](https://en.wikipedia.org/wiki/HTML5) 
