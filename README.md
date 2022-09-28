@@ -1,6 +1,6 @@
 # Recipe Manager
 
-| <a href="https://github.com/DamianMcNulty/project4recipes/stargazers">     <img src="https://img.shields.io/github/stars/DamianMcNulty/project4recipes.svg?style=social" alt="GitHub stars"> </a> | [![Travis CI Testing](https://travis-ci.org/DamianMcNulty/project4recipes.svg?branch=master)](https://travis-ci.org/DamianMcNulty/project4recipes) |
+| <a href="https://github.com/DamianMcNulty/project4recipes/stargazers">     <img src="https://img.shields.io/github/stars/DamianMcNulty/project4recipes.svg?style=social" alt="GitHub stars"> </a> | [![CircleCI](https://dl.circleci.com/status-badge/img/gh/DamianMcNulty/project4recipes/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/DamianMcNulty/project4recipes/tree/master) |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 ## Goal
