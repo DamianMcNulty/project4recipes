@@ -14,7 +14,6 @@
 -   [Technologies Used](#technologies-used)
 -   [Development Environment](#development-environment)
 -   [Local Testing](#local-testing)
--   [Deployment](#deployment)
 -   [Credits](#credits)
 -   [LICENSE](#license)
 
@@ -87,22 +86,6 @@
     npm run cy:open
 
     python test.py
-
-## Deployment
-
-[(Back to top)](#table-of-contents)
-
-    git clone https://github.com/DamianMcNulty/project4recipes.git
-    pip3 install -r requirements.txt
-    heroku login
-    heroku create damianmcdev1-project4recipes --region eu
-    echo web: python runserver.py > Procfile
-    heroku config:set IP="0.0.0.0"
-    heroku config:set PORT="8080"
-    heroku config:set SECRET_KEY="..."
-    heroku config:set MONGO_DBNAME="..."
-    heroku config:set MONGO_URI="..."
-    git push heroku master
 
 ## Research
 
