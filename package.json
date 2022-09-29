@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/DamianMcNulty/project4recipes#readme",
   "devDependencies": {
-    "cypress": "^3.1.5"
+    "cypress": "^3.8.3"
   }
 }
